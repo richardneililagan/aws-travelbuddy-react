@@ -14,39 +14,61 @@ const Infographic = () => {
 <Container fluid style={{backgroundColor:'white', paddingTop:"50px",paddingBottom:"50px"}}> 
 
 <Row>
-    <Col xs={0} sm={0} md={2} lg={0} xl={3}>
+    <Col xs={2} sm={2} md={2} lg={3} xl={3}></Col>
+    <Col xs={8} sm={8} md={8} lg={0} xl={6}>    <h1 style={{fontWeight:"light", letterSpacing:'2px', fontSize:'45px'}}> TravelBuddy </h1> </Col>
+    <Col xs={2} sm={2} md={2} lg={3} xl={3}></Col>
+
+</Row>
+
+<Row>
+
+<Col xs={2} sm={2} md={2} lg={3} xl={3}></Col>
+    <Col xs={8} sm={8} md={8} lg={6} xl={6}><h3 style={{fontWeight:"lighter", letterSpacing:'3px', fontSize:'25px'}}> The only buddy you need to bring along on your life's adventures</h3> </Col>
+    <Col xs={2} sm={2} md={2} lg={3} xl={3}></Col>
+
+</Row>
+       
+    <Row noGutters className="justify-content-md-center" style={{justifyContent:"center",paddingTop:'5rem'}}>
+
+    <Col> </Col>
+    <Col xs={0} sm={0} md={3} lg={0} xl={3}> 
+    <Row className="d-flex justify-content-center center-block d-block m-auto"> <img src={infopic1} alt="Logo" className="infopic1" /></Row>
+    <Row className="d-flex justify-content-center center-block d-block m-auto"><h2 style={{paddingTop:'1em', letterSpacing:'1px'}}> <center> Fly Safe </center></h2></Row>
+    <Row className="d-flex justify-content-center center-block d-block m-auto" style={{padding:"1em"}}>
+
+    {/* <Col xs={1}></Col>  */}
+    <Col xs={10}><p style={{letterSpacing:'1px'}}> <center>  Through collaborations with airlines around the world, TravelBuddy offers you the best price across millions of flights to create your perfect trip.</center> </p></Col> 
+    {/* <Col xs={1} ></Col>  */}
+    
+    </Row>
+
+    </Col>
+
+    <Col xs={0} sm={0} md={3} lg={0} xl={3}> 
+    <Row className="d-flex justify-content-center center-block d-block m-auto"> <img src={infopic2} alt="Logo" className="infopic1" /></Row>
+    <Row className="d-flex justify-content-center center-block d-block m-auto"><h2 style={{paddingTop:'1em', letterSpacing:'1px'}}><center>Recuperate Well</center></h2></Row>
+    <Row className="d-flex justify-content-center center-block d-block m-auto" style={{padding:"1em"}}> 
+    
+
+    {/* <Col xs={1} ></Col>  */}
+    <Col xs={10}>    <p style={{letterSpacing:'1px'}}> <center>  From the infinity pool at Marina Bay Sands, to sipping a margarita at the beachside at Finns Beach Resort, TravelBuddy helps you recuperate for your next adventure.</center> </p></Col> 
+    {/* <Col xs={1}></Col>  */}
+
+    </Row>
+    </Col>
+
+    <Col xs={0} sm={0} md={3} lg={0} xl={3}> 
+    <Row className="d-flex justify-content-center center-block d-block m-auto"> <img src={infopic3} alt="Logo" className="infopic1" /></Row>
+    <Row className="d-flex justify-content-center center-block d-block m-auto"><h2 style={{paddingTop:'1em', letterSpacing:'1px'}}><center>Bundled Deals </center></h2></Row>
+    <Row className="d-flex justify-content-center center-block d-block m-auto" style={{padding:"1em"}}>
+        
+        
+        {/* <Col xs={1}></Col>  */}
+    <Col xs={10}> <p style={{letterSpacing:'1px'}}> <center>The more you travel, the more you save. TravelBuddy ensures that you stretch every dollar to fulfil your vacation dreams. </center> </p></Col> 
+    {/* <Col xs={1}></Col>  */}
 
         
-    </Col>
-    <h1> TravelBuddy </h1> 
-
-       </Row>
-
-       <Row>
-       <Col xs={0} sm={0} md={2} lg={0} xl={3}></Col>
-       <h3> The only buddy you need to bring along on your life's adventures</h3> 
-       </Row>
-
-<Row className="justify-content-md-center" style={{justifyContent:"center",paddingTop:'5rem'}}>
-    <Col> </Col>
-    <Col> 
-    <Row className="d-flex justify-content-center center-block d-block m-auto"> <img src={infopic1} alt="Logo" className="infopic1" /></Row>
-    <Row className="d-flex justify-content-center center-block d-block m-auto"><h2 style={{paddingTop:'1em'}}>Fly Safe</h2></Row>
-    <Row className="d-flex justify-content-center center-block d-block m-auto" style={{padding:"1em"}}> <p> <center>  Through collaborations with airlines around the world, TravelBuddy offers you the best price across millions of flights to create your perfect trip.</center> </p></Row>
-
-    </Col>
-
-    <Col> 
-    <Row className="d-flex justify-content-center center-block d-block m-auto"> <img src={infopic2} alt="Logo" className="infopic1" /></Row>
-    <Row className="d-flex justify-content-center center-block d-block m-auto"><h2 style={{paddingTop:'1em'}}>Recuperate Well</h2></Row>
-    <Row className="d-flex justify-content-center center-block d-block m-auto" style={{padding:"1em"}}> <p> <center>  From the infinity pool at Marina Bay Sands, to sipping a margarita at the beachside at Finns Beach Resort, TravelBuddy helps you recuperate for your next adventure.</center> </p></Row>
-
-    </Col>
-
-    <Col> 
-    <Row className="d-flex justify-content-center center-block d-block m-auto"> <img src={infopic3} alt="Logo" className="infopic1" /></Row>
-    <Row className="d-flex justify-content-center center-block d-block m-auto"><h2 style={{paddingTop:'1em'}}>Bundled Deals</h2></Row>
-    <Row className="d-flex justify-content-center center-block d-block m-auto" style={{padding:"1em"}}> <p> <center>The more you travel, the more you save. TravelBuddyensures that you stretch every dollar to fulfil your vacation dreams. </center> </p></Row>
+        </Row>
 
 
     </Col>

@@ -52,30 +52,30 @@ const Footer = () => {
                 <li>
                   {" "}
                   <a href="https://www.hdb.gov.sg/cs/infoweb/residential/buying-a-flat/new/bto-sbf">
-                    HDB BTO Official Website
+                    Work with us
                   </a>
                 </li>
                 <li>
                   <a href="https://www.hdb.gov.sg/cs/infoweb/residential/buying-a-flat/new/bto-sbf">
-                    BTO/SBF/Opening
+                    Advertise with us
                   </a>
                 </li>
                 <li>
                   {" "}
                   <a href="https://www.google.com/search?q=bto+sales+launch&rlz=1C5CHFA_enSG888SG888&oq=bto+sales+launch&aqs=chrome..69i57j0l7.4459j0j4&sourceid=chrome&ie=UTF-8">
-                    BTO Sales Launch
+                    Market with us
                   </a>
                 </li>
                 <li>
                   {" "}
                   <a href="https://www.hdb.gov.sg/cs/infoweb/about-us/news-and-publications/press-releases">
-                    HDB Press Releases
+                    Travel Insight
                   </a>
                 </li>
                 <li>
                   {" "}
                   <a href="https://esales.hdb.gov.sg/bp25/launch/open/OPEN_page_7142/home.html">
-                    Apply For BTO
+                    Travel APIs
                   </a>
                 </li>
               </ul>
@@ -87,31 +87,31 @@ const Footer = () => {
                 <li>
                   {" "}
                   <a href="https://www.hdb.gov.sg/cs/infoweb/residential/buying-a-flat">
-                    Buying a Flat
+                    About us
                   </a>
                 </li>
                 <li>
                   {" "}
                   <a href="https://www.hdb.gov.sg/cs/infoweb/residential/financing-a-flat-purchase">
-                    Financing a Flat Purchase
+                    Why TravelBuddy? 
                   </a>
                 </li>
                 <li>
                   {" "}
                   <a href="https://www.hdb.gov.sg/cs/infoweb/residential/servicing-your-hdb-loan">
-                    Servicing your HDB Housing Loan
+                    Media
                   </a>
                 </li>
                 <li>
                   {" "}
                   <a href="https://www.hdb.gov.sg/cs/infoweb/residential/selling-a-flat">
-                    Selling a Flat
+                    Sustainability
                   </a>
                 </li>
                 <li>
                   {" "}
                   <a href="https://www.hdb.gov.sg/cs/infoweb/residential/renting-a-flat">
-                    Renting a Flat
+                    Jobs
                   </a>
                 </li>
               </ul>
@@ -157,7 +157,7 @@ const Footer = () => {
                 &copy; {new Date().getFullYear()} TravelBuddy App - All rights
                 reserved
               </div>
-              <div class="col-6 col-md-3">Subscribe to our Newsletter Service</div>
+              <div class="col-6 col-md-3" > <p style={{opacity:"0.6"}}> Subscribe to our Newsletter Service </p> </div>
             </div>
           </div>
         </div>
