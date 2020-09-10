@@ -12,6 +12,8 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+import CustomChatBot from "../chatbot/CustomChatBot";
+
 const downloadQR = () => {
     const canvas = document.getElementById("123456");
     const pngUrl = canvas
@@ -196,6 +198,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <CustomChatBot/>
     </FooterContainer>
   );
 };
