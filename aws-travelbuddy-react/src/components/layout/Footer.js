@@ -6,18 +6,52 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import EmailIcon from "@material-ui/icons/Email";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import TelegramIcon from "@material-ui/icons/Telegram";
-// import footer from "../Images/BTOlogowhite.png";
+import QRCode from "qrcode.react";
+
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+
+const downloadQR = () => {
+    const canvas = document.getElementById("123456");
+    const pngUrl = canvas
+      .toDataURL("image/png")
+      .replace("image/png", "image/octet-stream");
+    let downloadLink = document.createElement("a");
+    downloadLink.href = pngUrl;
+    downloadLink.download = "123456.png";
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  };
 
 const Footer = () => {
   return (
     <FooterContainer className="main-footer">
       <div className="footer-middle">
         <div className="container">
-            <h4>
-              {/* <img src={footer} alt="BTO Logo" width="40" height="35" />{" "} */}
-              TravelBuddy
-            </h4>
-            <h6 style={{"opacity":"0.7"}}>Travel for Everybody</h6>
+
+            <Row> 
+            <Col xs={10} xl={11} ><h4>TravelBuddy</h4><h6 style={{"opacity":"0.7"}}>Travel for Everybody</h6> </Col>
+                
+            <Col xs={2} xl={1}> 
+            <QRCode
+            id="123456"
+            value="123456"
+            size={60}
+            level={"H"}
+            includeMargin={true}
+            bgColor="#1A3752"
+            fgColor="White"
+            style={{marginTop:'-2px'}}
+            /> 
+       
+            </Col>
+            </Row> 
+
+
+
+
             <hr />
      
           <div className="row">

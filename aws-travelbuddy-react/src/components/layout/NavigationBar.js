@@ -93,7 +93,7 @@ const NavigationBar = () => {
           </a>
         </li>
         <li >
-        <Button variant="light" size="sm" style={{height:'26px',marginTop:'-3px'}}> <p style={{fontFamily:'Roboto','fontSize':"15px", fontColor:"#767676",marginTop:'-3px', color:"#767676"}}> <center> Join Free </center>  </p></Button>         </li>
+        <Button variant="light" size="sm" style={{height:'26px',marginTop:'-3px', width:'80px'}}> <p style={{fontFamily:'Roboto','fontSize':"15px", fontColor:"#767676",marginTop:'-3px', color:"#767676"}}> <center> Join Free </center>  </p></Button>         </li>
       </ul>
 
 
