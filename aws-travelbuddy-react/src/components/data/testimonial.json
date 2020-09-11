@@ -1,0 +1,52 @@
+{
+    "features": [
+      {
+        "id": 1,
+        "name": "Bhargava Krishna",
+        "title": "Analytics Manager, Seagate Technology",
+        "comments": "Glendon is driven and takes ownership of the tasks to ensure the team is provided with well-thought solutions. Being a data scientist has not stopped him from staying open minded and learning across disciplines to better assimilate himself with the business environment.",
+        "image": "https://media-exp1.licdn.com/dms/image/C5103AQHkdrbcA-yTgw/profile-displayphoto-shrink_200_200/0?e=1597276800&v=beta&t=eT9zhS0R-VJ5gpPmNk-l1cfdMziNyI8m7oJ6_TdedIs",
+        "linkedin": "https://www.linkedin.com/in/bhargava-krishna-sreepathi-85888759/"
+      },
+      {
+        "id": 2,
+        "name": "Helin Goh",
+        "title": "Senior Manager, Deloitte Consulting",
+        "comments": "Glendon is driven and takes ownership of the tasks to ensure the team is provided with well-thought solutions. Being a data scientist has not stopped him from staying open minded and learning across disciplines to better assimilate himself with the business environment.",
+        "image": "https://media-exp1.licdn.com/dms/image/C5103AQHhYDGGlRQvCg/profile-displayphoto-shrink_200_200/0?e=1597276800&v=beta&t=tARkwOTNoJTISBP3DN6osB421rBQU8b7NdNK7I4PI_Q",
+        "linkedin": "https://www.linkedin.com/in/helin-goh-67120a57/"
+      },
+      {
+        "id": 3,
+        "name": "Troy Han",
+        "title": "Senior Consultant, Deloitte Consulting",
+        "comments": "Glendon was willing to step up and acquire new skillsets in order to support the team when project requirements goes beyond his academic curriculum. His sound technical foundation enabled him to translate the research problem critically to bring business value.",
+        "image": "https://media-exp1.licdn.com/dms/image/C5603AQGBovrgKZ4a2w/profile-displayphoto-shrink_200_200/0?e=1597276800&v=beta&t=fTspQqxpY57FzMPwBSp64aoGagduWS1V2QVWkxrg5h4",
+        "linkedin": "https://www.linkedin.com/in/troyhan/"
+      },
+      {
+        "id": 4,
+        "name": "Dean Wong",
+        "title": "Senior Engineer, ST Kinetics",
+        "comments": "Glendon approaches work with curiosity and is a keen learner, willing to go beyond his work scope to understand the larger picture. His humility and team player mindset attributed to his teammates and other colleagues in the department to regard highly of him.",
+        "image": "https://media-exp1.licdn.com/dms/image/C5103AQFX40b15sLR6Q/profile-displayphoto-shrink_200_200/0?e=1597276800&v=beta&t=U2hkHSZQQhDXx9snM1Dmj8-nY7j1EEW0I3xsMCHXJPY",
+        "linkedin": "https://www.linkedin.com/in/dean-wong-62aa5b48/"
+      },
+      {
+        "id": 5,
+        "name": "Geraldine Song",
+        "title": "Senior Lecturer, Nanyang Technological University",
+        "comments": "Glendon is meticulous and detailed in everything he does and this makes him a valuable employee. He writes well and has excellent communication skills, allowing him to simplify complex ideas and concepts concisely and succinctly in a professional environment.                                                   ",
+        "image": "https://media-exp1.licdn.com/dms/image/C4E03AQE2E6h0JP38sw/profile-displayphoto-shrink_200_200/0?e=1597276800&v=beta&t=I0XjpuVMMD3tMitn44OExyjF8vx3MOAlTt9IIx1AiIs",
+        "linkedin": "https://www.linkedin.com/in/geraldine-song-a2410183/"
+      },
+      {
+        "id": 6,
+        "name": "Kai Siang Teo",
+        "title": "Head, Asia Pacific Programs, Military Avionics and Helicopters",
+        "comments": "Glendon is a promising, young engineer with great energy, enthusiasm and initiative for his work and career. His ability to communicate clearly and think critically stuck me most during his internship at ST Aerospace Systems.",
+        "image": "https://media-exp1.licdn.com/dms/image/C5103AQGS9HmNuI1K3g/profile-displayphoto-shrink_400_400/0?e=1597881600&v=beta&t=I4D8_TpvvHM1g87lNnGpTbng6QlYUkyS0THNVRLWg6s",
+        "linkedin": "https://www.linkedin.com/in/teokaisiang/"
+      }
+    ]
+  }

@@ -736,3 +736,110 @@ table th {
 }
 
 
+
+.landing-main-text{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 42px;
+  line-height: 49px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  
+}
+
+.landing-secondary-text{
+  font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 22px;
+line-height: 29px;
+text-align: center;
+letter-spacing: 0.04em;
+}
+
+.slick-dots {
+  position:relative;
+  align-items: center;
+  /* background-color: blue; */
+  justify-content: center;
+  /* margin-top: -30px; */
+  margin-bottom:20px;
+  
+
+}
+
+
+
+.slider-div {
+  background-color:white;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100%;
+  padding: 23px;
+}
+
+.projectImageDiv {
+  position: relative;
+}
+
+
+/* Flight Specials CSS  */
+
+
+.flight-specials-div{
+  width:70vw;
+  margin:auto;
+  margin-top:50px;
+  background-color:white
+}
+
+
+
+.flight-specials-card { 
+  width:580px;
+  padding:0px;
+  height:380px;
+  margin:auto;
+}
+
+.flight-specials-img { 
+height:280px;
+border-radius:3px 3px 0px 0px
+
+}
+
+.box-primary-text {
+color:#FFFFFF;
+float:left;
+font-family: Roboto;
+font-style: normal;
+font-weight: 900;
+font-size: 27px;
+line-height: 33px;
+
+}
+
+.box-secondary-text {
+color:#FF7B59;
+  float:right;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 28px;
+
+  }
+
+  .box-secondary-badge {
+      float:right;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bolder;
+      font-size: 24px;
+      line-height: 28px;
+      margin-right:-4px;
+      }
+    
+
+
