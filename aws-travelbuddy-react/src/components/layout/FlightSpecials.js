@@ -1,16 +1,34 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import CardTrial from "./CardTrial"
 import Slider from "react-slick";
 import * as testimonialData from "../data/testimonial.json"
+import useWindowDimensions from "../function/useWindowDimensions";
 
 const FlightSpecials = () => {
 
-    var settings = {
+  const { height, width } = useWindowDimensions();
+  const [numspad, setNumspad] = useState(2);
+
+  useEffect(() => {
+    function handleResize() {
+      window.addEventListener("resize", handleResize);
+    }
+
+    handleResize();
+
+    if (width > 1200) {
+      setNumspad(2);
+    } else {
+      setNumspad(1);
+    }
+  });
+
+  var settings = {
         dots: true,
         infinite: true,
         arrow: true,
         speed: 500,
-        slidesToShow: 2,
+        slidesToShow: numspad,
         slidesToScroll: 1,
       };
 
