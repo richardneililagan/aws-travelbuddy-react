@@ -6,6 +6,9 @@ import Home from "./components/pages/Home";
 import Footer from "./components/layout/Footer";
 import SegmentBar from "./components/layout/SegmentBar";
 
+import FlightPage from "./components/pages/FlightPage";
+import HotelPage from "./components/pages/HotelPage";
+
 const App = () => {
   return (
       <Fragment>
@@ -13,10 +16,10 @@ const App = () => {
           <NavigationBar />
           <SegmentBar/> 
           <Switch>
-            {/* <Route exact path="/website" component={Home} />
-            <Route exact path="/projects" component={ProjectPage} />
-            <Route exact path="/contact" component={Contact} /> */}
-            <Route component={Home} />
+             <Route exact path="/home" component={Home} />
+            <Route exact path="/flightpage" component={FlightPage} />
+            <Route exact path="/hotelpage" component={HotelPage} /> 
+        
           </Switch>
 
           <Footer />
