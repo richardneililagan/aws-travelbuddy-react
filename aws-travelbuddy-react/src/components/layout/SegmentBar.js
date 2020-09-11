@@ -1,8 +1,5 @@
-import React, { Fragment } from "react";
-import { Nav, Navbar } from "react-bootstrap";
+import React from "react";
 import { Link } from "react-router-dom";
-import LanguageIcon from '@material-ui/icons/Language';
-import Button from 'react-bootstrap/Button'
 import LocalAirportIcon from '@material-ui/icons/LocalAirport';
 import ApartmentIcon from '@material-ui/icons/Apartment';
 // import HotelIcon from '@material-ui/icons/Hotel';

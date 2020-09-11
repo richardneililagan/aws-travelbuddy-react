@@ -8,24 +8,23 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import TelegramIcon from "@material-ui/icons/Telegram";
 import QRCode from "qrcode.react";
 
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 import CustomChatBot from "../chatbot/CustomChatBot";
 
-const downloadQR = () => {
-    const canvas = document.getElementById("123456");
-    const pngUrl = canvas
-      .toDataURL("image/png")
-      .replace("image/png", "image/octet-stream");
-    let downloadLink = document.createElement("a");
-    downloadLink.href = pngUrl;
-    downloadLink.download = "123456.png";
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-    document.body.removeChild(downloadLink);
-  };
+// const downloadQR = () => {
+//     const canvas = document.getElementById("123456");
+//     const pngUrl = canvas
+//       .toDataURL("image/png")
+//       .replace("image/png", "image/octet-stream");
+//     let downloadLink = document.createElement("a");
+//     downloadLink.href = pngUrl;
+//     downloadLink.download = "123456.png";
+//     document.body.appendChild(downloadLink);
+//     downloadLink.click();
+//     document.body.removeChild(downloadLink);
+//   };
 
 const Footer = () => {
   return (
@@ -37,7 +36,7 @@ const Footer = () => {
             <Col xs={10} xl={11} ><h4>TravelBuddy</h4><h6 style={{"opacity":"0.7"}}>Travel for Everybody</h6> </Col>
                 
             <Col xs={2} xl={1}> 
-            <QRCode
+            {/* <QRCode
             id="123456"
             value="123456"
             size={60}
@@ -46,7 +45,7 @@ const Footer = () => {
             bgColor="#1A3752"
             fgColor="White"
             style={{marginTop:'-2px'}}
-            /> 
+            />  */}
        
             </Col>
             </Row> 
@@ -154,15 +153,24 @@ const Footer = () => {
             </div>
             {/* Column 4 */}
             <div className="col-md-3 col-sm-6">
-              {/* <h4>Lorem Ipsum</h4> */}
+            <QRCode
+            id="123456"
+            value="123456"
+            size={175}
+            level={"H"}
+            includeMargin={true}
+            bgColor="#1A3752"
+            fgColor="White"
+            style={{float:"right",marginRight:"4px", marginTop:"5px"}}
+            /> 
               <ul className="list-unstyled"></ul>
             </div>
           </div>
 
           <div class="row">
             <div class="col-12 col-md-10"></div>
-            <div class="col-6 col-md-2">
-              <a href="https://www.linkedin.com/company/singaporehdb/">
+            <div class="col-6 col-md-2" >
+              <a href="https://www.linkedin.com/company/singaporehdb/" >
                 {" "}
                 <LinkedInIcon a href="/" />
               </a>

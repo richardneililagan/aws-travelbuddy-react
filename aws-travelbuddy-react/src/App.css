@@ -771,8 +771,16 @@ letter-spacing: 0.04em;
 
 
 
-.slider-div {
+.slider-div-flight {
   background-color:white;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100%;
+  padding: 23px;
+}
+
+.slider-div-hotel {
+  background-color:#F7F8FA;
   overflow-x: hidden;
   overflow-y: hidden;
   height: 100%;
@@ -794,8 +802,6 @@ letter-spacing: 0.04em;
   background-color:white
 }
 
-
-
 .flight-specials-card { 
   width:580px;
   padding:0px;
@@ -805,22 +811,36 @@ letter-spacing: 0.04em;
 
 .flight-specials-img { 
 height:280px;
-border-radius:3px 3px 0px 0px
-
+border-radius:3px 3px 0px 0px;
+background-size: 600px;
 }
 
-.box-primary-text {
+
+.flight-specials-img-hovered { 
+  height:280px;
+  border-radius:3px 3px 0px 0px;
+  opacity:0.8;
+  background-size: 800px;
+  background-blend-mode: multiply;
+
+
+
+
+  }
+
+
+.flight-box-primary-text {
 color:#FFFFFF;
 float:left;
 font-family: Roboto;
 font-style: normal;
 font-weight: 900;
-font-size: 27px;
+font-size: 25px;
 line-height: 33px;
 
 }
 
-.box-secondary-text {
+.flight-box-secondary-text {
 color:#FF7B59;
   float:right;
   font-family: Roboto;
@@ -831,7 +851,7 @@ color:#FF7B59;
 
   }
 
-  .box-secondary-badge {
+.box-secondary-badge {
       float:right;
       font-family: Roboto;
       font-style: normal;
@@ -839,7 +859,127 @@ color:#FF7B59;
       font-size: 24px;
       line-height: 28px;
       margin-right:-4px;
-      }
-    
+}
+
+.flight-hovered-text-primary {
+  padding:25px;
+  font-size:25px;
+  font-weight:bolder;
+  text-align:center;
+  color:white; 
+  letter-spacing:0.8px;
+
+}
+
+.flight-hovered-text-secondary {
+  font-family:Roboto;
+  padding-left:30px;
+  font-size:21px;
+  font-weight:bold;
+  color:white;
+  letter-spacing:0.5px;
+  line-height: 130%;
+
+}
+
+.flight-hovered-text-tertiary{
+  float:right;
+  font-family:Roboto;
+  font-size:28px;
+  font-weight:bold;
+  color:white;
+  letter-spacing:0.2px;
+  padding-top:10px;
+  padding-right:40px;
+  
+
+}
+
+  
+  /* Hotel Specials CSS  */
+
+.hotel-specials-div{
+  width:70vw;
+  margin:auto;
+  margin-top:50px;
+  background-color:#F7F8FA;
+}
+
+.hotel-specials-card { 
+  width:390px;
+  padding:0px;
+  height:340px;
+  margin:auto;
+
+}
+
+.hotel-specials-img { 
+  height:290px;
+  border-radius:3px 3px 0px 0px;
+  background-size: 400px;
+}
+
+.hotel-specials-img-hovered { 
+  height:290px;
+  border-radius:3px 3px 0px 0px;
+  opacity:0.8;
+  background-size: 400px;
+  background-blend-mode: multiply;
+
+}
 
 
+
+.hotel-box-primary-text {
+  color:#FFFFFF;
+  float:left;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: 0.5px;
+  
+  }
+  
+  .hotel-box-secondary-text {
+  color:#FF7B59;
+    float:right;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 28px;
+    }
+
+    .hovered-text-primary {
+      padding:25px;
+      font-size:19px;
+      font-weight:bolder;
+      text-align:center;
+      color:white; 
+      letter-spacing:0.8px;
+
+    }
+
+    .hovered-text-secondary {
+      font-family:Roboto;
+      padding-left:30px;
+      font-size:17px;
+      font-weight:bold;
+      color:white;
+      letter-spacing:0.5px;
+      line-height: 124%;
+    }
+
+    .hovered-text-tertiary{
+      float:right;
+      font-family:Roboto;
+      font-size:21px;
+      font-weight:bold;
+      color:white;
+      letter-spacing:0.2px;
+      padding-right:25px;
+      
+
+    }

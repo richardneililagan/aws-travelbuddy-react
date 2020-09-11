@@ -25,12 +25,12 @@ function CustomChatBot(props) {
   const steps = [
     {
       id: "Greeting",
-      message: "Hey there, Thanks for visiting my page!",
-      trigger: "Would you like to reach out to me?",
+      message: "Hey there, Thanks for visiting TravelBuddy!",
+      trigger: "Would you like to reach out to us?",
     },
     {
-      id: "Would you like to reach out to me?",
-      message: "Would you like to reach out to me?",
+      id: "Would you like to reach out to us?",
+      message: "Would you like to reach out to us?",
       trigger: "Display options to reach out",
     },
     {

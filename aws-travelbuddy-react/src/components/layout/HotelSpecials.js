@@ -1,13 +1,13 @@
-import React,{ useEffect, useState } from "react";
-import FlightSpecialsCard from "./FlightSpecialsCard"
+import React, { Fragment, useEffect, useState } from "react";
+import HotelSpecialsCard from "./HotelSpecialsCard"
 import Slider from "react-slick";
 import * as testimonialData from "../data/testimonial.json"
 import useWindowDimensions from "../function/useWindowDimensions";
 
-const FlightSpecials = () => {
+const HotelSpecials = () => {
 
   const { height, width } = useWindowDimensions();
-  const [numspad, setNumspad] = useState(2);
+  const [numspad, setNumspad] = useState(3);
 
   useEffect(() => {
     function handleResize() {
@@ -17,7 +17,7 @@ const FlightSpecials = () => {
     handleResize();
 
     if (width > 1200) {
-      setNumspad(2);
+      setNumspad(3);
     } else {
       setNumspad(1);
     }
@@ -33,19 +33,22 @@ const FlightSpecials = () => {
       };
 
     return (
-        <div className='flight-specials-div'> 
+        <div style={{backgroundColor:'#F7F8FA', paddingTop:'25px'}}> 
+        <div className='hotel-specials-div'> 
           <h3 className='landing-secondary-text'>Limited Deals for Unlimited Fun</h3>
-            <h1 className="landing-main-text">FLIGHT SPECIALS</h1> 
+            <h1 className="landing-main-text">HOTEL SPECIALS</h1> 
             
-              <Slider {...settings} className="slider-div-flight">
+              <Slider {...settings} className="slider-div-hotel">
                 {testimonialData.features.map((testimonial) => (
                 // <Col xs={12} sm={12} md={12}>
-                  <FlightSpecialsCard
-                  image={testimonial.image}/>
+                  <HotelSpecialsCard
+                  image = {testimonial.image}
+                  />
                 // </Col>
         ))}
               </Slider>
      </div>
+     </div>
     )
 }
-export default FlightSpecials;
+export default HotelSpecials;
