@@ -58,27 +58,8 @@ return(
               </Select>
 </FormControl>
 
-{/* <Form.Group>
-<Form.Label htmlFor="disabledTextInput">From</Form.Label>
-  <Form.Control as="select" size="lg" className="select-bar-1">
-    <option>Singapore</option>
-    <option>Malaysia</option>
-    <option>Thailand</option>
-    <option>Vietnam</option>
-  </Form.Control>
-</Form.Group> */}
 </Col>
 <Col xl={5}> 
-
-{/* <Form.Group>
-<Form.Label htmlFor="disabledTextInput">To</Form.Label>
-  <Form.Control as="select" size="lg" className="select-bar-2">
-    <option>Everywhere</option>
-    <option>Large select</option>
-    <option>Large select</option>
-    <option>Large select</option>
-  </Form.Control>
-</Form.Group> */}
 
 <FormControl variant="outlined" className={classes.formControl}>
               <InputLabel id="demo-simple-select-outlined-label">

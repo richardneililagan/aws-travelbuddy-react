@@ -54,7 +54,7 @@ const NavigationBar = () => {
     <nav className="navbar">
       <ul className="nav-links">
       <li className="nav-links-homepage">
-          <Link to="/home" activeClassName="currentlyOn" style={{letterSpacing:"1px",fontSize:"20px", fontFamily:"Roboto", fontWeight:"bolder", textShadow:"0px 1px, 0px 0px, 0px 0px"}}>
+          <Link to="/home" activeClassName="currentlyOn" style={{letterSpacing:"2px",fontSize:"20px", fontWeight:"bolder", textShadow:"0px 0px, 0px 0px, 10.5x 0px"}}>
             <img src={TB_logo} style={{height:"27px", width:"27px", marginTop:"-5px",marginRight:"6px",opacity:"0.9"}} /> 
             TravelBuddy 
           </Link>{" "}

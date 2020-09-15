@@ -19,6 +19,7 @@ const App = () => {
              <Route exact path="/home" component={Home} />
             <Route exact path="/flight" component={FlightPage} />
             <Route exact path="/hotel" component={HotelPage} /> 
+            <Route component={Home} />
         
           </Switch>
 
