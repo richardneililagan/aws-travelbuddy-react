@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 
 
 const Banner = (props) => {
-    const {imageurl, backgroundPos } = props;
+    const {imageurl, backgroundPos, secondaryText } = props;
 
   return (
    <div className="header"> 
@@ -14,13 +14,14 @@ const Banner = (props) => {
    style={{height:"45vh", backgroundImage:`${imageurl}`,backgroundPosition: `${backgroundPos}`, filter:"brightness(100%)"}}
    > 
     <Row style={{paddingTop:"6rem"}}>
-    <Col xs={0} sm={0} md={1} lg={0} xl={2}></Col>
-       <h1 style={{fontSize:"65px", fontFamily:"Roboto",fontWeight:"bold",color:"white", letterSpacing:"2px",filter:"brightness(2)"}}> TravelBuddy </h1> 
+    <Col xs={1} sm={0} md={1} lg={0} xl={2}></Col>
+       <h1 className="banner-text-primary"> TravelBuddy </h1> 
        </Row>
 
        <Row>
-       <Col xs={0} sm={0} md={1} lg={0} xl={2}></Col>
-       <h3 style={{fontSize:"33px", fontFamily:"Roboto",fontWeight:"bold",color:"white"}}> The internet's source for the <u style={{color:"#D7D7D7"}}> best flights.</u> </h3> 
+       <Col xs={1} sm={0} md={1} lg={0} xl={2}></Col>
+       <h3 className="banner-text-secondary"> The internet's source for the <u style={{fontWeight:"bolder", opacity:"0.85"}}> best {secondaryText}.</u> </h3> 
+       <Col xs={2} xl={0}> </Col>
        </Row>
 
 

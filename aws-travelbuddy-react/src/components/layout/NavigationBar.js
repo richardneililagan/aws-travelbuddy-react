@@ -1,8 +1,10 @@
 import React, { Fragment } from "react";
-import { Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import LanguageIcon from '@material-ui/icons/Language';
 import Button from 'react-bootstrap/Button'
+
+import Divider from '@material-ui/core/Divider';
+import TB_logo from "../img/TB_logo.jpg"
 
 const onClick = () => {
   const nav = document.querySelector(".nav-links");
@@ -52,8 +54,9 @@ const NavigationBar = () => {
     <nav className="navbar">
       <ul className="nav-links">
       <li className="nav-links-homepage">
-          <Link to="/website" activeClassName="currentlyOn">
-            TravelBuddy
+          <Link to="/home" activeClassName="currentlyOn" style={{letterSpacing:"1px",fontSize:"20px", fontFamily:"Roboto", fontWeight:"bolder", textShadow:"0px 1px, 0px 0px, 0px 0px"}}>
+            <img src={TB_logo} style={{height:"27px", width:"27px", marginTop:"-5px",marginRight:"6px",opacity:"0.9"}} /> 
+            TravelBuddy 
           </Link>{" "}
         </li>
 
@@ -70,30 +73,28 @@ const NavigationBar = () => {
       <ul className="navbar-logo">
 
       <li className="nav-links-homepage">
-        <LanguageIcon fontSize="small" style={{marginBottom:'1px', opacity:'0.8'}} /> {'  '}
-
-          <Link to="/">
+        <LanguageIcon fontSize="small" style={{marginBottom:'2px', opacity:'0.8', marginRight:"1px"}} /> {'  '}
+          <Link to="/home">
             English (UK)
           </Link>{" "}
         </li>
       <li>
-          <Link to="/website">
+          <Link to="/home">
             Loyalty
           </Link>{" "}
         </li>
         <li >
-          <Link to="/projects">Manage</Link>
+          <Link to="/home">Manage</Link>
         </li>
+        <li> 
+        <Divider orientation="vertical" flexItem style={{height:"24px"}} />
+
+          </li>
         <li>
-          <a
-            href="https://www.keepandshare.com/doc7/62364/resume-of-glendon-1-pdf-38k?da=y"
-            target="_blank"
-          >
-            Login
-          </a>
+        <Link to="/home">Login</Link>
         </li>
         <li >
-        <Button variant="light" size="sm" style={{height:'26px',marginTop:'-3px', width:'80px'}}> <p style={{fontFamily:'Roboto','fontSize':"15px", fontColor:"#767676",marginTop:'-3px', color:"#767676"}}> <center> Join Free </center>  </p></Button>         </li>
+        <Button variant="light" size="sm" style={{height:'30px',marginTop:'-3px', width:'100px'}}> <p style={{fontFamily:'Roboto','fontSize':"15px", fontColor:"#767676",marginTop:'-1px', color:"#767676"}}> <center> Join Free </center>  </p></Button>         </li>
       </ul>
 
 

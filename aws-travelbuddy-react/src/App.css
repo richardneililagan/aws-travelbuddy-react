@@ -462,6 +462,7 @@ table th {
   text-decoration: none;
 }
 
+
 .burger div {
   width: 25px;
   height: 3px;
@@ -490,11 +491,11 @@ table th {
   flex-direction: row;
   justify-content: center;
   position: relative;
-  width: 20%;
+  width: 12%;
+  left:1%;
   font-size: 18px;
   font-style: bold;
   letter-spacing: 2px;
-
 
 }
 .nav-links a {
@@ -506,19 +507,21 @@ table th {
   list-style: none;
 }
 
+.nav-links-homepage {
+
+
+
+}
+
 .navbar-logo {
   position: relative;
   color: #767676;
   right: 0%;
   justify-content: space-around;
-  width: 30%;
+  width: 32%;
   font-family: "Roboto";
   font-size: 15px;
-
-  /* letter-spacing: 1px; */
 }
-
-
 
 /* Segment Bar CSS  */
 
@@ -527,12 +530,11 @@ table th {
   flex-direction: row;
   justify-content: center;
   position: relative;
-  left:5%;
-  width: 20%;
+  left:3%;
+  width: 18%;
   font-size: 16px;
-  font-style: lighter;
-  letter-spacing: 2px;
-  margin-top:1px;
+  letter-spacing: 0.8px;
+  margin-top:2px;
 
 }
 
@@ -547,6 +549,26 @@ table th {
 
 
 
+/* Banner CSS  */
+
+.banner-text-primary {
+font-family:Roboto;
+color:white;
+font-weight:bolder;
+font-size:65px;
+letter-spacing:2px;
+filter:brightness(2)
+
+}
+
+
+.banner-text-secondary {
+  font-size:33px;
+  font-family:Roboto;
+  font-weight:bold;
+  color:white
+
+}
 
 
 /* Mobile Responsive CSS  */
@@ -559,7 +581,7 @@ table th {
 
   .navbar-logo {
     width: 35%;
-    right: 3%;
+    right: 0%;
   }
 
   .segment-links{ 
@@ -567,13 +589,14 @@ table th {
     flex-direction: row;
     justify-content: center;
     position: relative;
-    left:5%;
-    width: 30%;
+    left:3%;
+    width: 23%;
     font-size: 16px;
-    font-style: lighter;
-    letter-spacing: 2px;
-    margin-top:1px;
+    letter-spacing: 0.8px;
+    margin-top:2px;
   }
+
+  
 
 
 
@@ -586,19 +609,19 @@ table th {
   }
 
   .navbar-logo {
-    width: 35%;
+    width: 36%;
+    right:0%;
   }
   .segment-links{ 
     display: flex;
     flex-direction: row;
     justify-content: center;
     position: relative;
-    left:5%;
-    width: 35%;
+    left:2%;
+    width: 39%;
     font-size: 16px;
-    font-style: lighter;
-    letter-spacing: 2px;
-    margin-top:1px;
+    letter-spacing: 0.8px;
+    margin-top:2px;
   }
 
 
@@ -610,7 +633,7 @@ table th {
     left: 0;
   }
   .navbar-logo {
-    width: 35%;
+    width: 43%;
     right:0%;
   }
   
@@ -619,8 +642,13 @@ table th {
 @media screen and (max-width: 1024px) {
 
   .navbar-logo {
-    width:55%;
+    width:48%;
     right:0%;
+  }
+
+  .nav-links{
+    left:0%;
+    width:35%;
   }
 
 
@@ -628,10 +656,6 @@ table th {
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
-  }
-
-  .nav-links{
-    left:5%;
   }
 
   .navbar-logo {
@@ -669,16 +693,65 @@ table th {
     flex-direction: row;
     justify-content: center;
     position: relative;
-    left:5%;
-    width: 70%;
+    left:1%;
+    width: 60%;
     font-size: 16px;
     font-style: lighter;
     letter-spacing: 2px;
-    margin-top:1px;
+    margin-top:2px;
   }
 
- 
+  .banner-text-primary {
+    font-family:Roboto;
+    color:white;
+    font-weight:bolder;
+    font-size:55px;
+    letter-spacing:2px;
+    filter:brightness(2)
+    
+    }
 
+    .banner-text-secondary {
+      font-size:28px;
+      font-family:Roboto;
+      font-weight:bold;
+      color:white
+    
+    }
+}
+
+@media screen and (max-width: 590px) {
+
+  .banner-text-primary {
+    font-family:Roboto;
+    color:white;
+    font-weight:bolder;
+    font-size:50px;
+    letter-spacing:2px;
+    filter:brightness(2)
+    
+    }
+    
+    .banner-text-secondary {
+      font-size:23px;
+      font-family:Roboto;
+      font-weight:bold;
+      color:white
+    
+    }
+
+    .segment-links{ 
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      position: relative;
+      left:3%;
+      width: 23%;
+      font-size: 16px;
+      letter-spacing: 0.8px;
+      margin-top:2px;
+    }
+    
 }
 
 @media screen and (max-width: 400px) {
@@ -705,6 +778,25 @@ table th {
     margin-top:1px;
   }
 
+  .banner-text-primary {
+    font-family:Roboto;
+    color:white;
+    font-weight:bolder;
+    font-size:45px;
+    letter-spacing:2px;
+    filter:brightness(2)
+    
+    }
+    
+    .banner-text-secondary {
+      font-size:21px;
+      font-family:Roboto;
+      font-weight:bold;
+      color:white
+    
+    }
+
+    
 
 }
 
@@ -741,21 +833,22 @@ table th {
   font-family: Roboto;
   font-style: normal;
   font-weight: 900;
-  font-size: 42px;
-  line-height: 49px;
+  font-size: 39px;
+  line-height: 29px;
   text-align: center;
-  letter-spacing: 0.1em;
-  
+  letter-spacing: 0.2em;
+  text-shadow:1px 1px;
 }
 
 .landing-secondary-text{
-  font-family: Roboto;
-font-style: normal;
-font-weight: bold;
-font-size: 22px;
-line-height: 29px;
+
+font-weight: 250;
+font-size: 21px;
+line-height: 39px;
 text-align: center;
-letter-spacing: 0.04em;
+letter-spacing: 0.1em;
+
+
 }
 
 .slick-dots {
@@ -822,12 +915,7 @@ background-size: 600px;
   opacity:0.8;
   background-size: 800px;
   background-blend-mode: multiply;
-
-
-
-
   }
-
 
 .flight-box-primary-text {
 color:#FFFFFF;
@@ -980,6 +1068,44 @@ color:#FF7B59;
       color:white;
       letter-spacing:0.2px;
       padding-right:25px;
+
       
 
+    }
+
+    .search-button{
+    
+      margin-top:8px;
+      width:97%;
+      height:56px;
+      opacity:0.4;
+
+    
+    }
+    
+    .select-bar-1{
+      height:100px;
+      margin-left:-10px;
+
+    }
+
+    .select-bar-2{
+      height:100px;
+      margin-left:-5px;
+
+    }
+
+
+    .activated-tab{ 
+    opacity:0.6;
+    font-weight:bold;
+    color:black;
+    border-bottom: 5px solid black;
+
+
+    }
+
+    .deactivated-tab {
+     opacity:0.7;
+     font-weight:500;
     }
