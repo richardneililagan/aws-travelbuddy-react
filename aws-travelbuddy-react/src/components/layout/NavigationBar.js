@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import LanguageIcon from '@material-ui/icons/Language';
 import Button from 'react-bootstrap/Button'
@@ -6,7 +6,12 @@ import Button from 'react-bootstrap/Button'
 import Divider from '@material-ui/core/Divider';
 import TB_logo from "../img/TB_logo.jpg"
 
+import {SiFloatplane} from "react-icons/si"
+import {FaBars, FaTimes} from "react-icons/fa"; 
+
 const onClick = () => {
+
+
   const nav = document.querySelector(".nav-links");
   const navLinks = document.querySelectorAll(".nav-links li");
   nav.classList.toggle("nav-active");
@@ -50,12 +55,18 @@ const onClick = () => {
 
 
 const NavigationBar = () => {
+  const [click, setClick] = useState(false);
+
+  const handleClick=()=> setClick(!click);
+
+
   return (
     <nav className="navbar">
       <ul className="nav-links">
       <li className="nav-links-homepage">
           <Link to="/home" activeClassName="currentlyOn" style={{letterSpacing:"2px",fontSize:"20px", fontWeight:"bolder", textShadow:"0px 0px, 0px 0px, 10.5x 0px"}}>
-            <img src={TB_logo} style={{height:"27px", width:"27px", marginTop:"-5px",marginRight:"6px",opacity:"0.9"}} /> 
+            <SiFloatplane className="nav-icon" style={{marginRight:"5px", marginBottom:"4px"}} /> 
+            {/* <img src={TB_logo} style={{height:"27px", width:"27px", marginTop:"-5px",marginRight:"6px",opacity:"0.9"}} />  */}
             TravelBuddy 
           </Link>{" "}
         </li>
@@ -70,9 +81,12 @@ const NavigationBar = () => {
 
       <Fragment>
 
-      <ul className="navbar-logo">
+      {/* <ul className="navbar-logo"> */}
+      <ul className={click ? 'nav-menu active' : 'nav-menu'}>
 
-      <li className="nav-links-homepage">
+      <li className="nav-links-homepage" onClick={handleClick}>
+      {click? <FaTimes/> : <FaBars/>}
+
         <LanguageIcon fontSize="small" style={{marginBottom:'2px', opacity:'0.8', marginRight:"1px"}} /> {'  '}
           <Link to="/home">
             English (UK)

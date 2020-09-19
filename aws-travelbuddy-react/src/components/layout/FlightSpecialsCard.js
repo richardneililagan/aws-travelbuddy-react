@@ -1,8 +1,13 @@
 import React, {Fragment,useState} from "react"
 import Card from 'react-bootstrap/Card'
+import {ListingDialog} from "./ListingDialog"
+import {useHoverLeave} from "../function/useHoverLeave"
+const FlightSpecialsCard = (props) => {   
 
-const FlightSpecialsCard = (props) => {    
-  const [hovered,setHovered] = useState(true)
+
+  const [hovered,setHovered] = useState(true);
+  const [open, setOpen] = useState(false);
+
   const mouseOver = () =>{ 
       setHovered(false)
   }
@@ -11,8 +16,32 @@ const FlightSpecialsCard = (props) => {
   }
   const {image} = props;
 
+  const handleOpen = () => {
+    setOpen(true);
+    console.log("click")
+  }
+
+  const handleClose = () => {
+    setOpen(false)
+  }
+
+  const [ref, notref] = useHoverLeave();
+  const mainClassName = props.css + "animated fadeIn card";
+
 return (
     <Fragment>
+
+        <ListingDialog
+        title={"test"}
+        link={"link"}
+        image={image}
+        desc={"description"}
+        short_desc={"short_desc"}
+        state={open}
+        close={handleClose}
+
+      />
+
               <Card
                 border="light"
                 className="flight-specials-card">
@@ -33,7 +62,7 @@ return (
       
     )}
 
-                <Card.Body style={{backgroundColor:"#1A3752"}}>
+                <Card.Body style={{backgroundColor:"#1A3752"}} onClick={handleOpen}>
                   <Card.Title>
                     <h1 className="flight-box-primary-text">
                       {"\n"}

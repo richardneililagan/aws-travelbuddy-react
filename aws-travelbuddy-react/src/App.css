@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 
-
-
-
 .header img{
   filter:brightness(200);
 }
@@ -978,7 +975,7 @@ color:#FF7B59;
   color:white;
   letter-spacing:0.2px;
   padding-top:10px;
-  padding-right:40px;
+  padding-right:35px;
   
 
 }
@@ -1109,3 +1106,28 @@ color:#FF7B59;
      opacity:0.7;
      font-weight:500;
     }
+
+
+
+
+
+
+
+.vLine {
+  border-left: 3.5px solid #575757;
+  height: 100px;
+  position:absolute; 
+  top:49%;
+  left:7.2%;
+  z-index: 0;
+  transition-delay: 2s;
+  animation: cssAnimation 0s 0.3s forwards;
+  visibility: hidden;
+
+}
+
+@keyframes cssAnimation { 
+
+  to   { visibility: visible; }
+
+}
