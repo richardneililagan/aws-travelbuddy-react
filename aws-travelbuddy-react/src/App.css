@@ -933,6 +933,7 @@ color:#FF7B59;
   font-weight: bold;
   font-size: 26px;
   line-height: 28px;
+  margin-top:5px;
 
   }
 
@@ -1164,9 +1165,9 @@ color:#FF7B59;
 .special-tag-primary-text {
   position: relative;
   font-weight:900;
-  font-size:35px;
+  font-size:30px;
   color:#1A3752;
-  left:120%;
+  left:125%;
 }
 
 .special-tag-secondary-text {
@@ -1176,6 +1177,6 @@ color:#FF7B59;
   color:#1A3752;
 
   position: absolute;
-  left:112%;
+  left:111%;
   top:60%;
 }

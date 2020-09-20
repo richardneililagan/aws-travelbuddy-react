@@ -5,8 +5,8 @@ import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 import Button from "react-bootstrap/Button"
 
-import HotelSpecialsCard from "./HotelSpecialsCard"
-import testimonialData from "../data/testimonial.json"
+import HotelCard from "./HotelCard"
+import hotelsData from "../data/hotels.json"
 
 import { makeStyles } from "@material-ui/core/styles";
 import FormControl from "@material-ui/core/FormControl";
@@ -109,10 +109,19 @@ return(
           width: "72%",
         }}
       >
-          {testimonialData.features.map((testimonial) => (
-          <HotelSpecialsCard
-           image={testimonial.image}
-           special={testimonial.special}/>
+          {hotelsData.available_hotels.map((hotel) => (
+                  <HotelCard
+                  name={hotel.name}
+                  country={hotel.country}
+                  address={hotel.address}
+                  short_description = {hotel.short_description}
+                  image={hotel.image}
+                  price={hotel.price}
+                  review_count={hotel.review_count}
+                  special = {hotel.special}
+                  special_time_remaining={hotel.special_time_remaining}
+
+                  />
         ))}
 </Container>
     </Fragment>

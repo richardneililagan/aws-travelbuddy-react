@@ -1,0 +1,86 @@
+{
+    "available_flights": [
+      {
+        "id": 1,
+        "origin": "Singapore",
+        "destination":"United States, New York",
+        "short_description":"Infinity Pool, Infinity Fun!",
+        "image": "https://images.unsplash.com/photo-1522083165195-3424ed129620?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1720&q=80",
+        "price":"$1106", 
+        "flight_number":"Singapore Airlines QR702", 
+        "review_count": "1241",
+        "arrival_date": "Tue, 13 May 2020",
+        "duration" : "16h 15m",
+        "special":true,
+        "special_time_remaining":"21"
+      },
+      {
+        "id": 2,
+        "origin": "Surabaya, Indonesia",
+        "destination":"Beijing, China",
+        "short_description":"Infinity Pool, Infinity Fun!",
+        "image": "https://images.unsplash.com/photo-1584872589930-e99fe5bf4408?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1956&q=80",
+        "price":"$307", 
+        "flight_number":"Eastern China Airlines QR14", 
+        "review_count": "301",
+        "arrival_date": "Tue, 13 Sep 2020",
+        "duration" : "4h 15m",
+        "special":true,
+        "special_time_remaining":"28"
+      },
+      {
+        "id": 3,
+        "origin": "Bangkok, Thailand",
+        "destination":"WellingTon, New Zealand",
+        "short_description":"There's only one word for NZ - EPIC",
+        "image": "https://images.unsplash.com/flagged/photo-1552035791-b3cc1632e933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80",
+        "price":"$1379", 
+        "flight_number":"Thai Airlines QR14", 
+        "review_count": "3015",
+        "arrival_date": "Tue, 13 Sep 2020",
+        "duration" : "21h 15m",
+        "special":true,
+        "special_time_remaining":"72"
+      },
+      {
+        "id": 4,
+        "origin": "Singapore",
+        "destination":"United States, New York",
+        "short_description":"Explore China's very finest!",
+        "image": "https://images.unsplash.com/photo-1522083165195-3424ed129620?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1720&q=80",
+        "price":"$1106", 
+        "flight_number":"Singapore Airlines QR702", 
+        "review_count": "1241",
+        "arrival_date": "Tue, 13 May 2020",
+        "duration" : "16h 15m",
+        "special":true,
+        "special_time_remaining":"37"
+      },
+      {
+        "id": 5,
+        "origin": "Surabaya, Indonesia",
+        "destination":"Beijing, China",
+        "short_description":"Explore China's very finest!",
+        "image": "https://images.unsplash.com/photo-1584872589930-e99fe5bf4408?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1956&q=80",
+        "price":"$307", 
+        "flight_number":"Eastern China Airlines QR14", 
+        "review_count": "301",
+        "arrival_date": "Tue, 13 Sep 2020",
+        "duration" : "4h 15m",
+        "special":false
+      },
+      {
+        "id": 6,
+        "origin": "Bangkok, Thailand",
+        "destination":"Wellington, New Zealand",
+        "short_description":"There's only one word for NZ - EPIC",
+        "image": "https://images.unsplash.com/flagged/photo-1552035791-b3cc1632e933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80",
+        "price":"$1379", 
+        "flight_number":"Thai Airlines QR14", 
+        "review_count": "3015",
+        "arrival_date": "Tue, 13 Sep 2020",
+        "duration" : "21h 15m",
+        "special":false
+      }
+    ]
+  }

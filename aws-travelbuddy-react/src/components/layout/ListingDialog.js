@@ -1,12 +1,5 @@
 import React, { Fragment, useState } from "react";
-import { withStyles } from "@material-ui/core/styles";
 import Dialog from "@material-ui/core/Dialog";
-import MuiDialogTitle from "@material-ui/core/DialogTitle";
-import MuiDialogContent from "@material-ui/core/DialogContent";
-import MuiDialogActions from "@material-ui/core/DialogActions";
-import IconButton from "@material-ui/core/IconButton";
-import CloseIcon from "@material-ui/icons/Close";
-import Typography from "@material-ui/core/Typography";
 import Card from "react-bootstrap/Card";
 import AccessAlarmsIcon from "@material-ui/icons/AccessAlarms";
 import Button from "react-bootstrap/Button"
@@ -24,50 +17,6 @@ import {FaMapPin} from "react-icons/fa"
 import {RiBuilding2Fill, RiBuildingFill}  from "react-icons/ri"
 import { TiTick } from "react-icons/ti"
 
-const styles = (theme) => ({
-  root: {
-    margin: 0,
-    padding: theme.spacing(2),
-  },
-  closeButton: {
-    position: "absolute",
-    right: theme.spacing(1),
-    top: theme.spacing(1),
-    color: theme.palette.grey[500],
-  },
-});
-
-const DialogTitle = withStyles(styles)((props) => {
-  const { children, classes, onClose, ...other } = props;
-  
-  return (
-    <MuiDialogTitle disableTypography className={classes.root} {...other}>
-      <Typography variant="h6">{children}</Typography>
-      {onClose ? (
-        <IconButton
-          aria-label="close"
-          className={classes.closeButton}
-          onClick={onClose}
-        >
-          <CloseIcon />
-        </IconButton>
-      ) : null}
-    </MuiDialogTitle>
-  );
-});
-
-const DialogContent = withStyles((theme) => ({
-  root: {
-    padding: theme.spacing(2),
-  },
-}))(MuiDialogContent);
-
-const DialogActions = withStyles((theme) => ({
-  root: {
-    margin: 1,
-    padding: theme.spacing(1),
-  },
-}))(MuiDialogActions);
 
 export const ListingDialog = (props) => {
 
@@ -82,12 +31,14 @@ export const ListingDialog = (props) => {
         maxWidth="sm"
         onClose={props.close}
         open={props.state}
-        id="dialog-box-div">
-          <Card style={{ margin:"-20px", overflow:"hidden"}}>
+        id="dialog-box-div"
+        >
+
+          <Card style={{margin:"-20px",overflowX:"hidden"}}>
             <Card.Img
               variant="top"
               src={props.image}
-              style={{ width: "100%", height: "30vh" }}
+              style={{ width: "100%", height: "30vh"}}
             />
 
             <div class="cross-container"> 
@@ -102,7 +53,7 @@ export const ListingDialog = (props) => {
                     <AiFillStar/>
                     <AiFillStar/>
                     <AiOutlineStar/>
-                    <b style={{fontSize:"11px", marginLeft:'2px'}} > 1281 reviews </b> 
+                    <b style={{fontSize:"11px", marginLeft:'2px'}} > {props.review_count} reviews </b> 
             </b>
 
               <p style={{ fontSize: "12px", textAlign: "right" }}>
@@ -134,13 +85,13 @@ export const ListingDialog = (props) => {
                { (ListingType === "flight") ? 
                (
                 <b style={{float:"left", marginBottom:"12px", opacity:"0.65", lineHeight:"30px"}}> 
-                <FaPlaneDeparture style={{marginRight:"10px"}}/> Singapore <br/> 
-               <FaPlaneArrival style={{marginRight:"10px"}}/> New York, United States</b> 
+                <FaPlaneDeparture style={{marginRight:"10px"}}/> {props.origin} <br/> 
+               <FaPlaneArrival style={{marginRight:"10px"}}/> {props.destination} </b> 
                )
                : (
                 <b style={{float:"left", marginBottom:"12px", opacity:"0.65", lineHeight:"30px"}}> 
-                <RiBuilding2Fill style={{marginRight:"10px"}}/> Finns Beach Resort <br/> 
-               <FaMapPin style={{marginRight:"10px"}}/> <b style={{fontSize:"13px"}}> Jalan Pantai Berawa No: 5, Tibubeneng, North Kuta, Indonesia </b> </b> 
+                <RiBuilding2Fill style={{marginRight:"10px"}}/> {props.name} <br/> 
+               <FaMapPin style={{marginRight:"10px"}}/> <b style={{fontSize:"13px"}}> {props.address} </b> </b> 
 
                ) }
                 </Col> 
@@ -166,7 +117,7 @@ export const ListingDialog = (props) => {
 
                       <Accordion.Collapse eventKey="1">
                       <Card.Body className="lead" style={{marginTop:"20px", marginBottom:"50px"}}> 
-                        <p style={{fontSize:"14px",fontWeight:"bold", opacity:"0.8"}}>  <TiPlane style={{height:"24px", width:'24px', marginBottom:"3px"}}/> Singapore Airlines QR702 </p>
+                        <p style={{fontSize:"14px",fontWeight:"bold", opacity:"0.8"}}>  <TiPlane style={{height:"24px", width:'24px', marginBottom:"3px"}}/> {props.flight_number} </p>
                         <p style={{fontSize:"14px",fontWeight:"bold", opacity:"0.8"}}> Flight Details</p>
                       <div className="vLine"> 
                       </div>
@@ -188,7 +139,7 @@ export const ListingDialog = (props) => {
                           </Row> 
                         </ul>
 
-                      <p style={{fontSize:"12px", float:"left", marginTop:"30px", fontWeight:"400"}}>  <b> Arrives: </b> Tue, 3 Nov 2020 | <b>Journey Duration:</b> 23h 15 </p>
+                      <p style={{fontSize:"12px", float:"left", marginTop:"30px", fontWeight:"400"}}>  <b> Arrives: </b> {props.arrival_date} | <b>Journey Duration:</b> {props.duration} </p>
                         </Card.Body>
                       </Accordion.Collapse>
 
@@ -237,7 +188,7 @@ export const ListingDialog = (props) => {
                 style={{ fontSize: "15px", letterSpacing: "0.04em", backgroundColor:"red" }}
               >
                 <div style={{marginRight:"3px", marginBottom:"5px", float:"right", fontWeight:"bold", fontSize:"30px", textAlign:"center", width:"120px"}}>
-              $2120
+            {props.price}
                 </div>
               </Card.Text>
               ) : (
@@ -246,7 +197,7 @@ export const ListingDialog = (props) => {
                 style={{ fontSize: "15px", letterSpacing: "0.04em", backgroundColor:"red" }}
               >
                 <div style={{marginRight:"3px", marginBottom:"5px", float:"right", fontWeight:"bold", fontSize:"18px", textAlign:"center", width:"120px"}}>
-              $2120 
+              {props.price}
               <a style={{fontSize:"10px", letterSpacing:"0.02em"}}> Per night</a> 
                 </div>
               </Card.Text>

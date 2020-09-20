@@ -1,12 +1,13 @@
-import React, { Fragment, useEffect, useState } from "react";
-import HotelSpecialsCard from "./HotelSpecialsCard"
+import React, { useEffect, useState } from "react";
+import HotelCard from "./HotelCard"
 import Slider from "react-slick";
-import * as testimonialData from "../data/testimonial.json"
+import * as hotelsData from "../data/hotels.json"
+
 import useWindowDimensions from "../function/useWindowDimensions";
 
 const HotelSpecials = () => {
 
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
   const [numspad, setNumspad] = useState(3);
 
   useEffect(() => {
@@ -21,7 +22,7 @@ const HotelSpecials = () => {
     } else {
       setNumspad(1);
     }
-  });
+  },[width]);
 
   var settings = {
         dots: true,
@@ -32,7 +33,7 @@ const HotelSpecials = () => {
         slidesToScroll: 1,
       };
 
-  var saleHotels = testimonialData.features.filter(testimonial => testimonial.special === true)
+  var saleHotels = hotelsData.available_hotels.filter(hotel => hotel.special === true)
 
 
     return (
@@ -42,10 +43,18 @@ const HotelSpecials = () => {
             <h1 className="landing-main-text">HOTEL SPECIALS</h1> 
             
               <Slider {...settings} className="slider-div-hotel">
-                {saleHotels.map((testimonial) => (
-                  <HotelSpecialsCard
-                  image = {testimonial.image}
-                  special = {testimonial.special}
+                {saleHotels.map((hotel) => (
+                  <HotelCard
+                  name={hotel.name}
+                  country={hotel.country}
+                  address={hotel.address}
+                  short_description = {hotel.short_description}
+                  image={hotel.image}
+                  price={hotel.price}
+                  review_count={hotel.review_count}
+                  special = {hotel.special}
+                  special_time_remaining={hotel.special_time_remaining}
+
                   />
         ))}
               </Slider>

@@ -1,12 +1,10 @@
 import React, {Fragment,useState} from "react"
 import Card from 'react-bootstrap/Card'
 import {ListingDialog} from "./ListingDialog"
-import {useHoverLeave} from "../function/useHoverLeave"
 import Button from "react-bootstrap/Button"
-import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
 
 const FlightSpecialsCard = (props) => {   
+
 
 
   const [hovered,setHovered] = useState(true);
@@ -28,25 +26,28 @@ const FlightSpecialsCard = (props) => {
     setOpen(false)
   }
 
-  const [ref, notref] = useHoverLeave();
-  const mainClassName = props.css + "animated fadeIn card";
-
 return (
     <Fragment>
 
         <ListingDialog
-        title={"test"}
-        link={"link"}
-        image={image}
-        desc={"description"}
-        short_desc={"short_desc"}
-        state={open}
-        close={handleClose}
-        ListingType={"flight"}/>
+          origin={props.origin}
+          destination={props.destination}
+          image={image}
+          price={props.price}
+          flight_number={props.flight_number}
+          review_count={props.review_count}
+          arrival_date={props.arrival_date}
+          duration={props.duration}
+          special = {props.special}
+          special_time_remaining={props.special_time_remaining}
+          state={open}
+          close={handleClose}
+          ListingType={"flight"}
+        />
 
-              <Card
-                border="light"
-                className="flight-specials-card">
+        <Card
+          border="light"
+          className="flight-specials-card">
 {hovered ? (
 
 <Fragment> 
@@ -54,7 +55,7 @@ return (
   {props.special ? (
     <div className="special-tag"> 
     <p>   
-      <b className="special-tag-primary-text"> 31  </b> 
+      <b className="special-tag-primary-text">{props.special_time_remaining}</b> 
       <p className="special-tag-secondary-text">  MINUTES  <br/> TO GO</p> 
     </p> 
   </div>
@@ -68,7 +69,7 @@ return (
 ) : (
     <div className="flight-specials-img-hovered" onClick={handleOpen} onMouseEnter={mouseOver} onMouseLeave={mouseOut} style={{backgroundImage:'linear-gradient(rgba(27,55,82,0.9), rgba(27,55,82,0.9)),url('+`${image}`+')'}}>
     
-<h1 className="flight-hovered-text-primary"> <center> Infinity Pool, Infinity Fun! </center></h1> 
+<h1 className="flight-hovered-text-primary"> <center> {props.short_description} </center></h1> 
 <h1 className="flight-hovered-text-secondary"> Deluxe Room with Garden View <br/> Free Buffet Breakast <br/> Min. 3 Nights</h1> 
 
 <h1 className="flight-hovered-text-tertiary"> 
@@ -82,9 +83,20 @@ return (
                   <Card.Title>
                     <h1 className="flight-box-primary-text">
                       {"\n"}
-                      Singapore to <br/>New York, United States
+                      {props.origin} to <br/> {props.destination}
                     </h1>{" "}
-                    <h5 style={{float:'right'}}> <span class="badge badge-pill badge-success box-secondary-badge" style={{backgroundColor:'#017864'}}> 41 minutes to go! </span> <br/> <p className="flight-box-secondary-text" > from $201 </p> </h5>
+
+                    { props.special ? (
+                   <h5 style={{float:'right'}}> <span class="badge badge-pill badge-success box-secondary-badge" style={{backgroundColor:'#017864'}}> Best Value! </span> <br/> <p className="flight-box-secondary-text" > from {props.price} </p> </h5>
+
+                    ) : (
+
+                      <h5 style={{float:'right'}}>  <br/> <p className="flight-box-secondary-text" > from {props.price} </p> </h5>
+
+                    ) }
+
+
+
                   </Card.Title>
                 </Card.Body>
               </Card>

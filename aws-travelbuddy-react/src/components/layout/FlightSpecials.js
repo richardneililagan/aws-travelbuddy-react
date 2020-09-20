@@ -1,12 +1,13 @@
 import React,{ useEffect, useState } from "react";
-import FlightSpecialsCard from "./FlightSpecialsCard"
+import FlightCard from "./FlightCard"
 import Slider from "react-slick";
-import * as testimonialData from "../data/testimonial.json"
+
+import * as flightsData from "../data/flights.json"
 import useWindowDimensions from "../function/useWindowDimensions";
 
 const FlightSpecials = () => {
 
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
   const [numspad, setNumspad] = useState(2);
 
   useEffect(() => {
@@ -21,7 +22,7 @@ const FlightSpecials = () => {
     } else {
       setNumspad(1);
     }
-  });
+  },[width]);
 
   var settings = {
         dots: true,
@@ -32,7 +33,7 @@ const FlightSpecials = () => {
         slidesToScroll: 1,
       };
 
-      var saleFlights = testimonialData.features.filter(testimonial => testimonial.special === true)
+      var saleFlights = flightsData.available_flights.filter(flight => flight.special === true)
 
     return (
         <div className='flight-specials-div'> 
@@ -40,10 +41,19 @@ const FlightSpecials = () => {
             <h1 className="landing-main-text">FLIGHT SPECIALS</h1> 
             
               <Slider {...settings} className="slider-div-flight">
-                {saleFlights.map((testimonial) => (
-                  <FlightSpecialsCard
-                  image={testimonial.image}
-                  special = {testimonial.special}
+                {saleFlights.map((flight) => (
+                  <FlightCard
+                  origin={flight.origin}
+                  destination={flight.destination}
+                  short_description={flight.short_description}
+                  image={flight.image}
+                  price={flight.price}
+                  flight_number={flight.flight_number}
+                  review_count={flight.review_count}
+                  arrival_date={flight.arrival_date}
+                  duration={flight.duration}
+                  special = {flight.special}
+                  special_time_remaining={flight.special_time_remaining}
                   
                   />
         ))}

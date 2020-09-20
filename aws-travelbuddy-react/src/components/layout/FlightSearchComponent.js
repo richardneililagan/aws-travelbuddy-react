@@ -4,16 +4,16 @@ import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 import Button from "react-bootstrap/Button"
-import Dropdown from "react-bootstrap/Dropdown"
 
-import FlightSpecialsCard from "./FlightSpecialsCard"
-import testimonialData from "../data/testimonial.json"
+import FlightCard from "./FlightCard"
 
 import { makeStyles } from "@material-ui/core/styles";
 import FormControl from "@material-ui/core/FormControl";
 import MenuItem from "@material-ui/core/MenuItem";
 import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
+
+import flightsData from "../data/flights.json"
 
 
 const FlightSearchComponent = () => { 
@@ -109,19 +109,27 @@ return(
           overflowY: "hidden",
           justifyContent: "center",
           width: "70%",
-          // marginBottom:"150px",
-          // marginTop:"-80px",
           height:"100%",
           paddingBottom:"10%"
         }}
 >
-          {testimonialData.features.map((testimonial) => (
+          {flightsData.available_flights.map((flight) => (
 
-          <FlightSpecialsCard
-           image={testimonial.image}
-           special = {testimonial.special}
-           
-           />
+            <FlightCard
+            origin={flight.origin}
+            destination={flight.destination}
+            short_description = {flight.short_description}
+            image={flight.image}
+            price={flight.price}
+            flight_number={flight.flight_number}
+            review_count={flight.review_count}
+            arrival_date={flight.arrival_date}
+            duration={flight.duration}
+            special = {flight.special}
+            special_time_remaining={flight.special_time_remaining}
+
+            />
+      
         ))}
 
 </Container>

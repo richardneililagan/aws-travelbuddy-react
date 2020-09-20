@@ -36,17 +36,6 @@ const Footer = () => {
             <Col xs={10} xl={11} ><h4>TravelBuddy</h4><h6 style={{"opacity":"0.7"}}>Travel for Everybody</h6> </Col>
                 
             <Col xs={2} xl={1}> 
-            {/* <QRCode
-            id="123456"
-            value="123456"
-            size={60}
-            level={"H"}
-            includeMargin={true}
-            bgColor="#1A3752"
-            fgColor="White"
-            style={{marginTop:'-2px'}}
-            />  */}
-       
             </Col>
             </Row> 
 

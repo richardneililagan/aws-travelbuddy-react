@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Banner from "../layout/Banner"
 import HotelSearchComponent from "../layout/HotelSearchComponent"
 
