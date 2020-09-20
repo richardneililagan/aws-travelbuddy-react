@@ -32,6 +32,9 @@ const HotelSpecials = () => {
         slidesToScroll: 1,
       };
 
+  var saleHotels = testimonialData.features.filter(testimonial => testimonial.special === true)
+
+
     return (
         <div style={{backgroundColor:'#F7F8FA', paddingTop:'25px'}}> 
         <div className='hotel-specials-div'> 
@@ -39,12 +42,11 @@ const HotelSpecials = () => {
             <h1 className="landing-main-text">HOTEL SPECIALS</h1> 
             
               <Slider {...settings} className="slider-div-hotel">
-                {testimonialData.features.map((testimonial) => (
-                // <Col xs={12} sm={12} md={12}>
+                {saleHotels.map((testimonial) => (
                   <HotelSpecialsCard
                   image = {testimonial.image}
+                  special = {testimonial.special}
                   />
-                // </Col>
         ))}
               </Slider>
      </div>

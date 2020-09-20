@@ -1,8 +1,12 @@
-import React, {useState} from "react"
+import React, {useState, Fragment} from "react"
 import Card from 'react-bootstrap/Card'
+import {ListingDialog} from "./ListingDialog"
+import Button from "react-bootstrap/Button"
 
 const HotelSpecialsCard = (props) => {    
     const [hovered,setHovered] = useState(true)
+    const [open, setOpen] = useState(false);
+
     const mouseOver = () =>{ 
         setHovered(false)
     }
@@ -11,22 +15,61 @@ const HotelSpecialsCard = (props) => {
     }
     const {image} = props;
 
+    const handleOpen = () => {
+      setOpen(true);
+    }
+  
+    const handleClose = () => {
+      setOpen(false)
+    }
+
+
 return (
-    <div> 
+    <Fragment> 
+        <ListingDialog
+        title={"test"}
+        link={"link"}
+        image={image}
+        desc={"description"}
+        short_desc={"short_desc"}
+        state={open}
+        close={handleClose}
+        ListingType={"hotel"}
+        />
+        
+
         <Card
           border="light"
           className="hotel-specials-card">
 
-
 {hovered ? (
 
-<div className="hotel-specials-img" onMouseOver={mouseOver} onMouseOut={mouseOut} style={{backgroundImage:"url("+`${image}`+")"}}> </div> 
+<Fragment> 
+
+{props.special ? (
+  <div className="special-tag"> 
+  <p>   
+    <b className="special-tag-primary-text"> 31  </b> 
+    <p className="special-tag-secondary-text">  MINUTES  <br/> TO GO</p> 
+  </p> 
+</div>
 ) : (
-    <div className="hotel-specials-img-hovered" onMouseOver={mouseOver} onMouseOut={mouseOut} style={{backgroundImage:'linear-gradient(rgba(27,55,82,0.9), rgba(27,55,82,0.9)),url('+`${image}`+')'}}>
+  <></>
+)}
+
+<div className="hotel-specials-img" onMouseEnter={mouseOver} onMouseLeave={mouseOut} style={{backgroundImage:"url("+`${image}`+")"}}> </div> 
+</Fragment> 
+) : (
+    <div className="hotel-specials-img-hovered" onMouseEnter={mouseOver} onMouseLeave={mouseOut} style={{backgroundImage:'linear-gradient(rgba(27,55,82,0.9), rgba(27,55,82,0.9)),url('+`${image}`+')'}}>
     
 <h1 className="hovered-text-primary"> <center> Infinity Pool, Infinity Fun! </center></h1> 
 <h1 className="hovered-text-secondary"> Deluxe Room with Garden View <br/> Free Buffet Breakast <br/> Min. 3 Nights</h1> 
-<h1 className="hovered-text-tertiary"> <a style={{color:"#FF7B59"}}> 2 </a> deals to go!</h1> 
+<h1 className="hovered-text-tertiary"> 
+
+<a style={{color:"#FF7B59"}}> <Button variant="outline-light" onClick={handleOpen} style={{width:"130px"}}>Find out More!</Button> </a>
+
+
+</h1> 
 
 
     </div> 
@@ -34,7 +77,7 @@ return (
     )}
           <Card.Body style={{backgroundColor:"#1A3752"}}>
             <Card.Title>
-              <h1 className="hotel-box-primary-text">
+              <h1 className="hotel-box-primary-text" onClick={ handleOpen}>
                 {"\n"}
                 Finns Beach Resort <br/> Singapore
               </h1>{" "}
@@ -42,15 +85,8 @@ return (
             </Card.Title>
           </Card.Body>
         </Card>
-</div>
+</Fragment>
 )
 }
 
 export default HotelSpecialsCard;
-
-    {/* <img
-    variant="top"
-    className={mainClassName}
-    onMouseOver={mouseOver}
-    onMouseOut ={mouseOut}
-      src={bannerpalmtrees}/> */}

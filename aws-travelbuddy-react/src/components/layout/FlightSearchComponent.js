@@ -28,7 +28,6 @@ const FlightSearchComponent = () => {
       marginTop: theme.spacing(100),
     },
   }));
-
   const classes = useStyles();
 
 
@@ -117,8 +116,12 @@ return(
         }}
 >
           {testimonialData.features.map((testimonial) => (
+
           <FlightSpecialsCard
-           image={testimonial.image}/>
+           image={testimonial.image}
+           special = {testimonial.special}
+           
+           />
         ))}
 
 </Container>

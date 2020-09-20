@@ -2,6 +2,10 @@ import React, {Fragment,useState} from "react"
 import Card from 'react-bootstrap/Card'
 import {ListingDialog} from "./ListingDialog"
 import {useHoverLeave} from "../function/useHoverLeave"
+import Button from "react-bootstrap/Button"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
+
 const FlightSpecialsCard = (props) => {   
 
 
@@ -18,7 +22,6 @@ const FlightSpecialsCard = (props) => {
 
   const handleOpen = () => {
     setOpen(true);
-    console.log("click")
   }
 
   const handleClose = () => {
@@ -39,27 +42,40 @@ return (
         short_desc={"short_desc"}
         state={open}
         close={handleClose}
-
-      />
+        ListingType={"flight"}/>
 
               <Card
                 border="light"
                 className="flight-specials-card">
-
-
 {hovered ? (
 
-<div className="flight-specials-img" onMouseOver={mouseOver} onMouseOut={mouseOut} style={{backgroundImage:"url("+`${image}`+")"}}> </div> 
+<Fragment> 
+
+  {props.special ? (
+    <div className="special-tag"> 
+    <p>   
+      <b className="special-tag-primary-text"> 31  </b> 
+      <p className="special-tag-secondary-text">  MINUTES  <br/> TO GO</p> 
+    </p> 
+  </div>
+  ) : (
+    <></>
+  )}
+
+
+<div className="flight-specials-img" onMouseEnter={mouseOver} onMouseLeave={mouseOut} onClick={handleOpen}  style={{backgroundImage:"url("+`${image}`+")"}}> </div> 
+</Fragment>
 ) : (
-    <div className="flight-specials-img-hovered" onMouseOver={mouseOver} onMouseOut={mouseOut} style={{backgroundImage:'linear-gradient(rgba(27,55,82,0.9), rgba(27,55,82,0.9)),url('+`${image}`+')'}}>
+    <div className="flight-specials-img-hovered" onClick={handleOpen} onMouseEnter={mouseOver} onMouseLeave={mouseOut} style={{backgroundImage:'linear-gradient(rgba(27,55,82,0.9), rgba(27,55,82,0.9)),url('+`${image}`+')'}}>
     
 <h1 className="flight-hovered-text-primary"> <center> Infinity Pool, Infinity Fun! </center></h1> 
 <h1 className="flight-hovered-text-secondary"> Deluxe Room with Garden View <br/> Free Buffet Breakast <br/> Min. 3 Nights</h1> 
-<h1 className="flight-hovered-text-tertiary"> <a style={{color:"#FF7B59"}}> <u> 2 </u> </a> deals to go!</h1> 
 
-
-    </div> 
-      
+<h1 className="flight-hovered-text-tertiary"> 
+{/* <a style={{color:"#FF7B59"}}> <u> 2 </u> </a> deals to go! */}
+<a style={{color:"#FF7B59"}}> <Button variant="outline-light" onClick={handleOpen} style={{width:"150px"}}>Find out More!</Button> </a>
+</h1> 
+</div>
     )}
 
                 <Card.Body style={{backgroundColor:"#1A3752"}} onClick={handleOpen}>

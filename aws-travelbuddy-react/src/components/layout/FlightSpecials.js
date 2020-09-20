@@ -32,17 +32,20 @@ const FlightSpecials = () => {
         slidesToScroll: 1,
       };
 
+      var saleFlights = testimonialData.features.filter(testimonial => testimonial.special === true)
+
     return (
         <div className='flight-specials-div'> 
           <h3 className='landing-secondary-text'>Limited Deals for Unlimited Fun</h3>
             <h1 className="landing-main-text">FLIGHT SPECIALS</h1> 
             
               <Slider {...settings} className="slider-div-flight">
-                {testimonialData.features.map((testimonial) => (
-                // <Col xs={12} sm={12} md={12}>
+                {saleFlights.map((testimonial) => (
                   <FlightSpecialsCard
-                  image={testimonial.image}/>
-                // </Col>
+                  image={testimonial.image}
+                  special = {testimonial.special}
+                  
+                  />
         ))}
               </Slider>
      </div>

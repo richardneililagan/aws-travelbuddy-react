@@ -2,12 +2,9 @@ import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import LanguageIcon from '@material-ui/icons/Language';
 import Button from 'react-bootstrap/Button'
-
 import Divider from '@material-ui/core/Divider';
-import TB_logo from "../img/TB_logo.jpg"
-
 import {SiFloatplane} from "react-icons/si"
-import {FaBars, FaTimes} from "react-icons/fa"; 
+
 
 const onClick = () => {
 
@@ -81,11 +78,11 @@ const NavigationBar = () => {
 
       <Fragment>
 
-      {/* <ul className="navbar-logo"> */}
-      <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+      <ul className="navbar-logo">
+      {/* <ul className={click ? 'nav-menu active' : 'nav-menu'}> */}
 
       <li className="nav-links-homepage" onClick={handleClick}>
-      {click? <FaTimes/> : <FaBars/>}
+      {/* {click? <FaTimes/> : <FaBars/>} */}
 
         <LanguageIcon fontSize="small" style={{marginBottom:'2px', opacity:'0.8', marginRight:"1px"}} /> {'  '}
           <Link to="/home">

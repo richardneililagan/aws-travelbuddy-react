@@ -107,14 +107,12 @@ return(
           overflowY: "hidden",
           justifyContent: "center",
           width: "72%",
-          // marginBottom:"150px",
-          // marginTop:"-80px",
-          // backgroundColor:"blue"
         }}
       >
           {testimonialData.features.map((testimonial) => (
           <HotelSpecialsCard
-           image={testimonial.image}/>
+           image={testimonial.image}
+           special={testimonial.special}/>
         ))}
 </Container>
     </Fragment>
