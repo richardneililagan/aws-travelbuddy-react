@@ -432,7 +432,6 @@ table th {
 
 
 /* Navbar CSS */
-/* ADDED FROM WEBSITE */
 
 .navbar {
   display: flex;
@@ -471,6 +470,20 @@ table th {
   display: none;
 }
 
+/* Burger Animation */
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -504,11 +517,6 @@ table th {
   list-style: none;
 }
 
-.nav-links-homepage {
-
-
-
-}
 
 .navbar-logo {
   position: relative;
@@ -518,6 +526,21 @@ table th {
   width: 32%;
   font-family: "Roboto";
   font-size: 15px;
+}
+
+
+.join-button{
+  height:30px;
+  margin-top:-3px;
+  width:100px;
+}
+
+
+.join-button-text{
+  font-family:Roboto;
+  font-size:15px;
+  margin-top:-1px;
+  color:#767676;
 }
 
 /* Segment Bar CSS  */
@@ -638,16 +661,15 @@ filter:brightness(2)
 
 @media screen and (max-width: 1024px) {
 
-  .navbar-logo {
-    width:48%;
-    right:0%;
-  }
-
   .nav-links{
     left:0%;
-    width:35%;
+    width:23%;
   }
 
+  .navbar-logo {
+    width:53%;
+    right:0%;
+  }
 
 }
 @media screen and (max-width: 768px) {
@@ -655,17 +677,73 @@ filter:brightness(2)
     overflow-x: hidden;
   }
 
+  .join-button{
+    height:40px;
+    width:200px;
+    margin-top:-3px;
+    width:100px;
+    font-size:50px;
+  }
+
+  .join-button-text{
+    font-family:Roboto;
+    font-size:19px;
+    color:#767676;
+  }
+
   .navbar-logo {
     position: absolute;
-    right: 5%;
+    top:8vh;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 25%;
+    flex-direction: column;
+    align-items:center;
+    width: 100vw;
     font-family: "Poppins";
     font-size: 18px;
     color: #767676;
     letter-spacing: 1px;
+    padding:5%;
+
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    z-index: 1;
+    background-color:white;
+    font-family:Roboto;
+    line-height:50px;
+  }
+
+  .navbar-divider {
+    height:0px;
+    width:0px;
+    visibility: hidden;
+  }
+
+
+
+  /* .nav-links {
+    position: absolute;
+    left: 0px;
+    height: 30vh;
+    top: 6vh;
+    background-color: #31474f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in;
+    z-index: 1;
+    margin-top: -1px;
+    opacity: 1;
+    font-size: 20px;
+  } */
+
+
+  .nav-links{
+    left:0%;
+    width:30%;
   }
 
   .nav-links ul {
@@ -680,7 +758,8 @@ filter:brightness(2)
 
   .burger {
     position: absolute;
-    right: 5%;
+    top:20%;
+    right: 2%;
     display: block;
     cursor: pointer;
   }
@@ -1013,7 +1092,6 @@ color:#FF7B59;
   background-blend-mode: multiply;
 
 }
-
 
 
 .hotel-box-primary-text {

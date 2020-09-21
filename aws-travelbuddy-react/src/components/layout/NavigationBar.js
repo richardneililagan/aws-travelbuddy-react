@@ -8,9 +8,8 @@ import {SiFloatplane} from "react-icons/si"
 
 const onClick = () => {
 
-
-  const nav = document.querySelector(".nav-links");
-  const navLinks = document.querySelectorAll(".nav-links li");
+  const nav = document.querySelector(".navbar-logo");
+  const navLinks = document.querySelectorAll(".navbar-logo li");
   nav.classList.toggle("nav-active");
 
   navLinks.forEach((link, index) => {
@@ -27,26 +26,32 @@ const onClick = () => {
   burger.classList.toggle("toggle");
 
   if (nav.classList.value.includes("nav-active")) {
-    const home = document.querySelector(".nav-links-homepage");
-    const projects = document.querySelector(".nav-links-projects");
-    const resume = document.querySelector(".nav-links-resume");
-    const contact = document.querySelector(".nav-links-contact");
+    const lang = document.querySelector(".nav-links-lang");
+    const loyalty = document.querySelector(".nav-links-loyalty");
+    const manage = document.querySelector(".nav-links-manage");
+    const login = document.querySelector(".nav-links-login");
+    const join = document.querySelector(".nav-links-join");
 
-    home.addEventListener("click", () => {
+    lang.addEventListener("click", () => {
       onClick();
     });
 
-    projects.addEventListener("click", () => {
+    loyalty.addEventListener("click", () => {
       onClick();
     });
 
-    resume.addEventListener("click", () => {
+    manage.addEventListener("click", () => {
       onClick();
     });
 
-    contact.addEventListener("click", () => {
+    login.addEventListener("click", () => {
       onClick();
     });
+
+    join.addEventListener("click", () => {
+      onClick();
+    });
+    
   }
 };
 
@@ -63,7 +68,6 @@ const NavigationBar = () => {
       <li className="nav-links-homepage">
           <Link to="/home" activeClassName="currentlyOn" style={{letterSpacing:"2px",fontSize:"20px", fontWeight:"bolder", textShadow:"0px 0px, 0px 0px, 10.5x 0px"}}>
             <SiFloatplane className="nav-icon" style={{marginRight:"5px", marginBottom:"4px"}} /> 
-            {/* <img src={TB_logo} style={{height:"27px", width:"27px", marginTop:"-5px",marginRight:"6px",opacity:"0.9"}} />  */}
             TravelBuddy 
           </Link>{" "}
         </li>
@@ -79,33 +83,26 @@ const NavigationBar = () => {
       <Fragment>
 
       <ul className="navbar-logo">
-      {/* <ul className={click ? 'nav-menu active' : 'nav-menu'}> */}
-
-      <li className="nav-links-homepage" onClick={handleClick}>
-      {/* {click? <FaTimes/> : <FaBars/>} */}
-
+      <li className="nav-links-lang">
         <LanguageIcon fontSize="small" style={{marginBottom:'2px', opacity:'0.8', marginRight:"1px"}} /> {'  '}
           <Link to="/home">
             English (UK)
           </Link>{" "}
         </li>
-      <li>
+      <li className="nav-links-loyalty" >
           <Link to="/home">
             Loyalty
           </Link>{" "}
         </li>
-        <li >
+        <li className="nav-links-manage" >
           <Link to="/home">Manage</Link>
         </li>
-        <li> 
-        <Divider orientation="vertical" flexItem style={{height:"24px"}} />
-
-          </li>
-        <li>
+        {/* <Divider orientation="vertical" className="navbar-divider" flexItem style={{height:"24px"}} />  */}
+        <li className="nav-links-login" >
         <Link to="/home">Login</Link>
         </li>
-        <li >
-        <Button variant="light" size="sm" style={{height:'30px',marginTop:'-3px', width:'100px'}}> <p style={{fontFamily:'Roboto','fontSize':"15px", fontColor:"#767676",marginTop:'-1px', color:"#767676"}}> <center> Join Free </center>  </p></Button>         </li>
+        <li className="nav-links-join" >
+        <Button variant="light" size="sm" className="join-button"> <p className="join-button-text"> <center> Join Free </center> </p></Button>         </li>
       </ul>
 
 
