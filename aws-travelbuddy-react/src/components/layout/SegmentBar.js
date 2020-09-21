@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import { Link } from "react-router-dom";
+import React, {useState, useEffect} from "react";
+import { Link, useLocation } from "react-router-dom";
 import LocalAirportIcon from '@material-ui/icons/LocalAirport';
 import ApartmentIcon from '@material-ui/icons/Apartment';
 import LoyaltyIcon from '@material-ui/icons/Loyalty';
@@ -11,10 +11,13 @@ const SegmentBar = () => {
   const [FlightClassName, setFlightCassName] = useState('deactivated-tab')
   const [HotelClassName, setHotelClassName] = useState('deactivated-tab')
 
+  const location = useLocation();
+  console.log("this", location.pathname);
   const changeSpecialClass=()=>{
     setSpecialClassName('activated-tab')
     setFlightCassName('deactivated-tab')
     setHotelClassName('deactivated-tab')
+
   }
   const changeFlightClass=()=>{
     setSpecialClassName('deactivated-tab')
@@ -27,6 +30,27 @@ const SegmentBar = () => {
     setFlightCassName('deactivated-tab')
     setHotelClassName('activated-tab')
   }
+
+
+  useEffect(() => {
+    if (location.pathname==="/home") {
+      changeSpecialClass()  
+    }
+  
+    if (location.pathname==="/flight") {
+      changeFlightClass()  
+    }
+  
+    if (location.pathname==="/hotel") {
+      changeHotelClass()  
+    }
+  },[location]) 
+
+
+
+
+
+
 return (
 
     <nav className="navbar">

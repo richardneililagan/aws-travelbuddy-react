@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import HotelCard from "./HotelCard"
 import Slider from "react-slick";
 import * as hotelsData from "../data/hotels.json"
-
+import { Link } from "react-router-dom";
 import useWindowDimensions from "../function/useWindowDimensions";
+import {IoIosArrowForward} from "react-icons/io"
+
 
 const HotelSpecials = () => {
 
@@ -41,6 +43,8 @@ const HotelSpecials = () => {
         <div className='hotel-specials-div'> 
           <h3 className='landing-secondary-text'>Limited Deals for Unlimited Fun</h3>
             <h1 className="landing-main-text">HOTEL SPECIALS</h1> 
+            <Link to="/hotel" style={{color:"black"}}> <h3 className='landing-secondary-text' style={{marginTop:"10px"}}>View all Hotels<IoIosArrowForward/></h3> </Link>
+
             
               <Slider {...settings} className="slider-div-hotel">
                 {saleHotels.map((hotel) => (

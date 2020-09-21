@@ -1,9 +1,11 @@
 import React,{ useEffect, useState } from "react";
 import FlightCard from "./FlightCard"
 import Slider from "react-slick";
-
+import { Link } from "react-router-dom";
 import * as flightsData from "../data/flights.json"
 import useWindowDimensions from "../function/useWindowDimensions";
+import {IoIosArrowForward} from "react-icons/io"
+
 
 const FlightSpecials = () => {
 
@@ -39,7 +41,9 @@ const FlightSpecials = () => {
         <div className='flight-specials-div'> 
           <h3 className='landing-secondary-text'>Limited Deals for Unlimited Fun</h3>
             <h1 className="landing-main-text">FLIGHT SPECIALS</h1> 
-            
+            <Link to="/flight" style={{color:"black"}}> <h3 className='landing-secondary-text' style={{marginTop:"10px"}}>View all Flights<IoIosArrowForward/></h3> </Link>
+
+
               <Slider {...settings} className="slider-div-flight">
                 {saleFlights.map((flight) => (
                   <FlightCard
