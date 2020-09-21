@@ -55,27 +55,6 @@ return(
 </FormControl>
 
 </Col>
-{/* <Col xl={5}> 
-
-
-
-<FormControl variant="outlined" className={classes.formControl}>
-              <InputLabel id="demo-simple-select-outlined-label">
-                To
-              </InputLabel>
-              <Select
-                labelId="demo-simple-select-outlined-label"
-                id="demo-simple-select-outlined"
-                // onChange={handleChange}
-                label="Categories"
-              >
-                <MenuItem value="1">Everywhere</MenuItem>
-                <MenuItem value="2">United States</MenuItem>
-                <MenuItem value="3">China</MenuItem>
-              </Select>
-</FormControl>
-
-</Col> */}
 <Col xl={2}> 
 <Button variant="outline-secondary" className="search-button"><center> <h4 style={{marginTop:"6px", fontSize:'18px', color:'black'}}> Search </h4></center> </Button>{' '}
 </Col> 
