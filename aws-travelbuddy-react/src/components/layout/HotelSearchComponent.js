@@ -100,6 +100,7 @@ return(
                   review_count={hotel.review_count}
                   special = {hotel.special}
                   special_time_remaining={hotel.special_time_remaining}
+                  property_highlights = {hotel.property_highlights}
 
                   />
         ))}

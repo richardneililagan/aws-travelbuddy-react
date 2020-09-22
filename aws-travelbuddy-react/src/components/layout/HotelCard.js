@@ -40,6 +40,7 @@ return (
           state={open}
           close={handleClose}
           ListingType={"hotel"}
+          property_highlights = {props.property_highlights}
         />
         
         <Card

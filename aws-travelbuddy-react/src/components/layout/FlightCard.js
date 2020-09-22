@@ -40,6 +40,9 @@ return (
           state={open}
           close={handleClose}
           ListingType={"flight"}
+          journey_map={props.journey_map}
+          journey_timeline={props.journey_timeline}
+          
         />
 
         <Card

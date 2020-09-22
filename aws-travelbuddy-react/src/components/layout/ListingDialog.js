@@ -17,11 +17,21 @@ import {FaMapPin} from "react-icons/fa"
 import {RiBuilding2Fill, RiBuildingFill}  from "react-icons/ri"
 import { TiTick } from "react-icons/ti"
 
+import Timeline from '@material-ui/lab/Timeline';
+import TimelineItem from '@material-ui/lab/TimelineItem';
+import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
+import TimelineConnector from '@material-ui/lab/TimelineConnector';
+import TimelineContent from '@material-ui/lab/TimelineContent';
+import TimelineDot from '@material-ui/lab/TimelineDot';
+
 
 export const ListingDialog = (props) => {
 
   const [AccordionState, setAccordionState] = useState(true)
   const ListingType = props.ListingType;
+
+  console.log(props.journey_timeline)
+  console.log(props.journey_map)
 
   var d = new Date(0); 
   d.setUTCSeconds(props.arrival_date)
@@ -31,21 +41,23 @@ export const ListingDialog = (props) => {
   var dayofMonth = dateString.slice(8,10)
   var year = dateString.slice(11,15)
 
+
+
   return (
     <Fragment>
       <Dialog
-        fullWidth={Boolean(true)}
+        fullWidth={Boolean(false)}
         maxWidth="sm"
         onClose={props.close}
         open={props.state}
         id="dialog-box-div"
-        >
 
-          <Card style={{margin:"-20px",overflowX:"hidden"}}>
+        >
+          <Card style={{marginTop:"-17px", marginBottom:'-1px'}}>
             <Card.Img
               variant="top"
               src={props.image}
-              style={{ width: "100%", height: "30vh"}}
+              style={{ width: "106%", height: "30vh", marginLeft:"-17px"}}
             />
 
             <div class="cross-container"> 
@@ -117,35 +129,38 @@ export const ListingDialog = (props) => {
                     </Row> 
                         </Accordion.Toggle>
                         </Card.Header>
-                        
-
-
+                      
                         { (ListingType === "flight") ? (
 
                       <Accordion.Collapse eventKey="1">
                       <Card.Body className="lead" style={{marginTop:"20px", marginBottom:"50px"}}> 
                         <p style={{fontSize:"14px",fontWeight:"bold", opacity:"0.8"}}>  <TiPlane style={{height:"24px", width:'24px', marginBottom:"3px"}}/> {props.flight_number} </p>
                         <p style={{fontSize:"14px",fontWeight:"bold", opacity:"0.8"}}> Flight Details</p>
-                      <div className="vLine"> 
-                      </div>
-                        <ul style={{lineHeight:"50px", fontSize:"15px", marginLeft:'9px'}}>
-                          <Row style={{marginLeft:"-25px"}}> 
-                            <Col xs={1} xl={1}><AiTwotoneCiCircle style={{color:"#575757"}}/></Col>
-                            <Col xs={11} xl={11}> <li> 17:35 JFK New York John F. Kenndy </li> </Col>
-                          
-                          </Row> 
-                          <Row style={{marginLeft:"-25px"}}> 
-                            <Col xs={1} xl={1}><AiTwotoneCiCircle style={{color:"#575757"}}/></Col>
-                            <Col xs={11} xl={11}> <li> 17:35 JFK New York John F. Kenndy </li> </Col>
-                          
-                          </Row> 
-                      <Row style={{marginLeft:"-25px"}}> 
-                            <Col xs={1} xl={1}><AiTwotoneCiCircle style={{color:"#575757"}}/></Col>
-                            <Col xs={11} xl={11}> <li> 17:35 JFK New York John F. Kenndy </li> </Col>
-                          
-                          </Row> 
-                        </ul>
-
+                  
+                        <Timeline style={{width:"800px", fontSize:"15px", color:"black", marginLeft:"-370px"}}>
+                            { props.journey_map && props.journey_timeline && (props.journey_timeline).map((waypoint_time,index) => {
+                              if(index===props.journey_timeline.length-1) {
+                                return (
+                                  <TimelineItem>
+                                  <TimelineSeparator>
+                                    <TimelineDot />
+                                  </TimelineSeparator>
+                                <TimelineContent><b>{waypoint_time}</b> {props.journey_map[index]} </TimelineContent>
+                                </TimelineItem>
+                                )
+                              } else {
+                                return (
+                                  <TimelineItem>
+                                  <TimelineSeparator>
+                                    <TimelineDot />
+                                    <TimelineConnector />
+                                  </TimelineSeparator>
+                                  <TimelineContent><b>{waypoint_time}</b>  {props.journey_map[index]} </TimelineContent>
+                                </TimelineItem>
+                                )
+                              }
+                            })}
+                        </Timeline>                
                       <p style={{fontSize:"12px", float:"left", marginTop:"30px", fontWeight:"400"}}>  <b> Arrives: </b> {dayofWeek}, {dayofMonth} {month} {year} | <b>Journey Duration:</b> {props.duration} </p>
                         </Card.Body>
                       </Accordion.Collapse>
@@ -156,24 +171,15 @@ export const ListingDialog = (props) => {
                             <p style={{fontSize:"14px",fontWeight:"bold", opacity:"0.8"}}>  <RiBuildingFill style={{height:"24px", width:'24px', marginBottom:"3px", marginRight:"4px"}}/> Deluxe Room with Garden View </p>
                             <p style={{fontSize:"14px",fontWeight:"bold", opacity:"0.8"}}> Property Highlights</p>
 
-                          {/* <div className="vLine"> 
-                          </div> */}
                             <ul style={{lineHeight:"50px", fontSize:"15px", marginLeft:'9px'}}>
+
+                            {props.property_highlights && (props.property_highlights).map((highlight,index) => (
                               <Row style={{marginLeft:"-25px"}}> 
-                                <Col xs={1} xl={1}><TiTick style={{color:"#575757"}}/></Col>
-                                <Col xs={11} xl={11}> <li> Spa and Wellness Centre </li> </Col>
-                              
-                              </Row> 
-                              <Row style={{marginLeft:"-25px"}}> 
-                                <Col xs={1} xl={1}><TiTick style={{color:"#575757"}}/></Col>
-                                <Col xs={11} xl={11}> <li> Free Buffet Breakfast </li> </Col>
-                              
-                              </Row> 
-                       <Row style={{marginLeft:"-25px"}}> 
-                                <Col xs={1} xl={1}><TiTick style={{color:"#575757"}}/></Col>
-                                <Col xs={11} xl={11}> <li> Min. 3 Nights </li> </Col>
-                              
-                              </Row> 
+                              <Col xs={1} xl={1}><TiTick style={{color:"#575757"}}/></Col>
+                              <Col xs={11} xl={11}> <li> {highlight} </li> </Col>  
+                            </Row> 
+                            ))
+                          }
                             </ul>
                    
                         <p style={{fontSize:"12px", float:"left", marginTop:"30px", fontWeight:"400"}}>  <b> Check in: </b> From 14:00 hrs | <b>Check Out:</b> By 12:00 hrs </p>

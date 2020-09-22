@@ -12,7 +12,9 @@
         "arrival_date":1600771786,
         "duration" : "16h 15m",
         "special":true,
-        "special_time_remaining":"21"
+        "special_time_remaining":"21",
+        "journey_map":["SIN Singapore Changi","NRT Tokyo Narita","ORD Chiacgo O'Hare International","NRT Tokyo Narita","ORD Chiacgo O'Hare International"],
+        "journey_timeline":["17:35", "02:13", "3:58","02:13", "3:58"]
       },
       {
         "id": 2,
@@ -26,7 +28,9 @@
         "arrival_date":1500775786,
         "duration" : "4h 15m",
         "special":true,
-        "special_time_remaining":"28"
+        "special_time_remaining":"28",        
+        "journey_map":["SIN Singapore Changi","NRT Tokyo Narita","ORD Chiacgo O'Hare International"],
+        "journey_timeline":["17:35", "02:13", "3:58"]
       },
       {
         "id": 3,
@@ -40,7 +44,9 @@
         "arrival_date":1500715786,
         "duration" : "21h 15m",
         "special":true,
-        "special_time_remaining":"72"
+        "special_time_remaining":"72",
+        "journey_map":["SIN Singapore Changi","NRT Tokyo Narita","ORD Chiacgo O'Hare International"],
+        "journey_timeline":["17:35", "02:13", "3:58"]
       },
       {
         "id": 4,
@@ -54,7 +60,9 @@
         "arrival_date":1200775786,
         "duration" : "16h 15m",
         "special":true,
-        "special_time_remaining":"37"
+        "special_time_remaining":"37",
+        "journey_map":["SIN Singapore Changi","NRT Tokyo Narita","ORD Chiacgo O'Hare International"],
+        "journey_timeline":["17:35", "02:13", "3:58"]
       },
       {
         "id": 5,
@@ -67,7 +75,9 @@
         "review_count": "301",
         "arrival_date":1601771786,
         "duration" : "4h 15m",
-        "special":false
+        "special":false,
+        "journey_map":["SIN Singapore Changi","NRT Tokyo Narita","ORD Chiacgo O'Hare International"],
+        "journey_timeline":["17:35", "02:13", "3:58"]
       },
       {
         "id": 6,
@@ -80,7 +90,9 @@
         "review_count": "3015",
         "arrival_date":1602771786,
         "duration" : "21h 15m",
-        "special":false
+        "special":false,
+        "journey_map":["SIN Singapore Changi","NRT Tokyo Narita","ORD Chiacgo O'Hare International"],
+        "journey_timeline":["17:35", "02:13", "3:58"]
       }
     ]
   }
