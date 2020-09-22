@@ -23,6 +23,13 @@ export const ListingDialog = (props) => {
   const [AccordionState, setAccordionState] = useState(true)
   const ListingType = props.ListingType;
 
+  var d = new Date(0); 
+  d.setUTCSeconds(props.arrival_date)
+  var dateString = String(d)
+  var dayofWeek = dateString.slice(0,3)
+  var month = dateString.slice(4,7)
+  var dayofMonth = dateString.slice(8,10)
+  var year = dateString.slice(11,15)
 
   return (
     <Fragment>
@@ -139,7 +146,7 @@ export const ListingDialog = (props) => {
                           </Row> 
                         </ul>
 
-                      <p style={{fontSize:"12px", float:"left", marginTop:"30px", fontWeight:"400"}}>  <b> Arrives: </b> {props.arrival_date} | <b>Journey Duration:</b> {props.duration} </p>
+                      <p style={{fontSize:"12px", float:"left", marginTop:"30px", fontWeight:"400"}}>  <b> Arrives: </b> {dayofWeek}, {dayofMonth} {month} {year} | <b>Journey Duration:</b> {props.duration} </p>
                         </Card.Body>
                       </Accordion.Collapse>
 

@@ -86,6 +86,7 @@ return(
           overflowY: "hidden",
           justifyContent: "center",
           width: "72%",
+          marginBottom:"10%"
         }}
       >
           {hotelsData.available_hotels.map((hotel) => (

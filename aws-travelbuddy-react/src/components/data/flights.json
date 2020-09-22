@@ -9,7 +9,7 @@
         "price":"$1106", 
         "flight_number":"Singapore Airlines QR702", 
         "review_count": "1241",
-        "arrival_date": "Tue, 13 May 2020",
+        "arrival_date":1600771786,
         "duration" : "16h 15m",
         "special":true,
         "special_time_remaining":"21"
@@ -23,7 +23,7 @@
         "price":"$307", 
         "flight_number":"Eastern China Airlines QR14", 
         "review_count": "301",
-        "arrival_date": "Tue, 13 Sep 2020",
+        "arrival_date":1500775786,
         "duration" : "4h 15m",
         "special":true,
         "special_time_remaining":"28"
@@ -37,7 +37,7 @@
         "price":"$1379", 
         "flight_number":"Thai Airlines QR14", 
         "review_count": "3015",
-        "arrival_date": "Tue, 13 Sep 2020",
+        "arrival_date":1500715786,
         "duration" : "21h 15m",
         "special":true,
         "special_time_remaining":"72"
@@ -51,7 +51,7 @@
         "price":"$1106", 
         "flight_number":"Singapore Airlines QR702", 
         "review_count": "1241",
-        "arrival_date": "Tue, 13 May 2020",
+        "arrival_date":1200775786,
         "duration" : "16h 15m",
         "special":true,
         "special_time_remaining":"37"
@@ -65,7 +65,7 @@
         "price":"$307", 
         "flight_number":"Eastern China Airlines QR14", 
         "review_count": "301",
-        "arrival_date": "Tue, 13 Sep 2020",
+        "arrival_date":1601771786,
         "duration" : "4h 15m",
         "special":false
       },
@@ -78,7 +78,7 @@
         "price":"$1379", 
         "flight_number":"Thai Airlines QR14", 
         "review_count": "3015",
-        "arrival_date": "Tue, 13 Sep 2020",
+        "arrival_date":1602771786,
         "duration" : "21h 15m",
         "special":false
       }

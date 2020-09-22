@@ -12,7 +12,6 @@ const SegmentBar = () => {
   const [HotelClassName, setHotelClassName] = useState('deactivated-tab')
 
   const location = useLocation();
-  console.log("this", location.pathname);
   const changeSpecialClass=()=>{
     setSpecialClassName('activated-tab')
     setFlightCassName('deactivated-tab')
@@ -45,11 +44,6 @@ const SegmentBar = () => {
       changeHotelClass()  
     }
   },[location]) 
-
-
-
-
-
 
 return (
 

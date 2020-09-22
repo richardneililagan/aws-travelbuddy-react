@@ -3,10 +3,7 @@ import Card from 'react-bootstrap/Card'
 import {ListingDialog} from "./ListingDialog"
 import Button from "react-bootstrap/Button"
 
-const FlightSpecialsCard = (props) => {   
-
-
-
+const FlightCard = (props) => {   
   const [hovered,setHovered] = useState(true);
   const [open, setOpen] = useState(false);
 
@@ -105,4 +102,4 @@ return (
 )
 }
 
-export default FlightSpecialsCard;
+export default FlightCard;
