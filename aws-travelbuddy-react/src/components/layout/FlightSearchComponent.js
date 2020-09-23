@@ -127,7 +127,8 @@ return(
             duration={flight.duration}
             special = {flight.special}
             special_time_remaining={flight.special_time_remaining}
-
+            journey_map={flight.journey_map}
+            journey_timeline={flight.journey_timeline}
             />
       
         ))}
