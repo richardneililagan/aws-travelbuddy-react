@@ -42,7 +42,7 @@ return (
           ListingType={"flight"}
           journey_map={props.journey_map}
           journey_timeline={props.journey_timeline}
-          
+
         />
 
         <Card
@@ -87,11 +87,11 @@ return (
                     </h1>{" "}
 
                     { props.special ? (
-                   <h5 style={{float:'right'}}> <span class="badge badge-pill badge-success box-secondary-badge" style={{backgroundColor:'#017864'}}> Best Value! </span> <br/> <p className="flight-box-secondary-text" > from {props.price} </p> </h5>
+                   <h5 style={{float:'right'}}> <span class="badge badge-pill badge-success box-secondary-badge" style={{backgroundColor:'#017864'}}> Best Value! </span> <br/> <p className="flight-box-secondary-text" > from ${props.price} </p> </h5>
 
                     ) : (
 
-                      <h5 style={{float:'right'}}>  <br/> <p className="flight-box-secondary-text" > from {props.price} </p> </h5>
+                      <h5 style={{float:'right'}}>  <br/> <p className="flight-box-secondary-text" > from ${props.price} </p> </h5>
 
                     ) }
 

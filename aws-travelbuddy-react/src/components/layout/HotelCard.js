@@ -88,9 +88,9 @@ return (
               </h1>{" "}
 
               { props.special ? (
-              <h5 style={{float:'right'}}> <span class="badge badge-pill badge-success box-secondary-badge" style={{backgroundColor:'#017864'}}> Best Value! </span> <br/> <p className="hotel-box-secondary-text" style={{float:"right"}}>  {props.price} / night</p> </h5>
+              <h5 style={{float:'right'}}> <span class="badge badge-pill badge-success box-secondary-badge" style={{backgroundColor:'#017864'}}> Best Value! </span> <br/> <p className="hotel-box-secondary-text" style={{float:"right"}}>  ${props.price} / night</p> </h5>
               ) : (
-                <h5 style={{float:'right'}}><br/> <p className="hotel-box-secondary-text" style={{float:"right"}}>  {props.price} / night</p> </h5>
+                <h5 style={{float:'right'}}><br/> <p className="hotel-box-secondary-text" style={{float:"right"}}>  ${props.price} / night</p> </h5>
                 )}
 
             </Card.Title>

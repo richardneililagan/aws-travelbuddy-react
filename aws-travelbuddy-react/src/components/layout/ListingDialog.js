@@ -201,7 +201,7 @@ export const ListingDialog = (props) => {
                 style={{ fontSize: "15px", letterSpacing: "0.04em", backgroundColor:"red" }}
               >
                 <div style={{marginRight:"3px", marginBottom:"5px", float:"right", fontWeight:"bold", fontSize:"30px", textAlign:"center", width:"120px"}}>
-            {props.price}
+            ${props.price}
                 </div>
               </Card.Text>
               ) : (
@@ -210,7 +210,7 @@ export const ListingDialog = (props) => {
                 style={{ fontSize: "15px", letterSpacing: "0.04em", backgroundColor:"red" }}
               >
                 <div style={{marginRight:"3px", marginBottom:"5px", float:"right", fontWeight:"bold", fontSize:"18px", textAlign:"center", width:"120px"}}>
-              {props.price}
+              ${props.price}
               <a style={{fontSize:"10px", letterSpacing:"0.02em"}}> Per night</a> 
                 </div>
               </Card.Text>
