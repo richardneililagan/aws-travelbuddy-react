@@ -52,7 +52,7 @@ return (
 <Fragment> 
 
 {props.special ? (
-  <div className="special-tag"> 
+  <div className="special-tag" style={{marginTop:"2px"}}> 
   <p>   
     <b className="special-tag-primary-text"> {props.special_time_remaining}  </b> 
     <p className="special-tag-secondary-text">  MINUTES  <br/> TO GO</p> 

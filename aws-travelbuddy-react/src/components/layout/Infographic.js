@@ -31,41 +31,36 @@ const Infographic = () => {
     <Row noGutters className="justify-content-md-center" style={{justifyContent:"center",paddingTop:'5rem'}}>
 
     <Col> </Col>
-    <Col xs={0} sm={0} md={3} lg={0} xl={3}> 
+    <Col xs={0} sm={0} md={0} lg={0} xl={3}> 
     <Row className="d-flex justify-content-center center-block d-block m-auto"> <img src={infopic1} alt="Logo" className="infopic1" /></Row>
     <Row className="d-flex justify-content-center center-block d-block m-auto"><h2 style={{paddingTop:'1em', letterSpacing:'1px'}}> <center> Fly Safe </center></h2></Row>
     <Row className="d-flex justify-content-center center-block d-block m-auto" style={{padding:"1em"}}>
 
-    {/* <Col xs={1}></Col>  */}
-    <Col xs={10}><p style={{letterSpacing:'1px'}}> <center>  Through collaborations with airlines around the world, TravelBuddy offers you the best price across millions of flights to create your perfect trip.</center> </p></Col> 
-    {/* <Col xs={1} ></Col>  */}
+    <Col xs={10} sm={10} > <p style={{letterSpacing:'1px'}}> <center>  Through collaborations with airlines around the world, TravelBuddy offers you the best price across millions of flights to create your perfect trip.</center> </p></Col> 
     
     </Row>
 
     </Col>
 
-    <Col xs={0} sm={0} md={3} lg={0} xl={3}> 
+    <Col xs={0} sm={0} md={0} lg={0} xl={3}> 
     <Row className="d-flex justify-content-center center-block d-block m-auto"> <img src={infopic2} alt="Logo" className="infopic1" /></Row>
     <Row className="d-flex justify-content-center center-block d-block m-auto"><h2 style={{paddingTop:'1em', letterSpacing:'1px'}}><center>Recuperate Well</center></h2></Row>
     <Row className="d-flex justify-content-center center-block d-block m-auto" style={{padding:"1em"}}> 
     
 
-    {/* <Col xs={1} ></Col>  */}
-    <Col xs={10}>    <p style={{letterSpacing:'1px'}}> <center>  From the infinity pool at Marina Bay Sands, to sipping a margarita at the beachside at Finns Beach Resort, TravelBuddy helps you recuperate for your next adventure.</center> </p></Col> 
-    {/* <Col xs={1}></Col>  */}
+
+    <Col xs={10} sm={10} > <p style={{letterSpacing:'1px'}}> <center>  From the infinity pool at Marina Bay Sands, to sipping a margarita at the beachside at Finns Beach Resort, TravelBuddy helps you recuperate for your next adventure.</center> </p></Col> 
+
 
     </Row>
     </Col>
 
-    <Col xs={0} sm={0} md={3} lg={0} xl={3}> 
+    <Col xs={0} sm={0} md={0} lg={0} xl={3}> 
     <Row className="d-flex justify-content-center center-block d-block m-auto"> <img src={infopic3} alt="Logo" className="infopic1" /></Row>
     <Row className="d-flex justify-content-center center-block d-block m-auto"><h2 style={{paddingTop:'1em', letterSpacing:'1px'}}><center>Bundled Deals </center></h2></Row>
     <Row className="d-flex justify-content-center center-block d-block m-auto" style={{padding:"1em"}}>
-        
-        
-        {/* <Col xs={1}></Col>  */}
-    <Col xs={10}> <p style={{letterSpacing:'1px'}}> <center>The more you travel, the more you save. TravelBuddy ensures that you stretch every dollar to fulfil your vacation dreams. </center> </p></Col> 
-    {/* <Col xs={1}></Col>  */}
+    <Col xs={10} sm={10} > <p style={{letterSpacing:'1px'}}> <center>The more you travel, the more you save. TravelBuddy ensures that you stretch every dollar to fulfil your vacation dreams. </center> </p></Col> 
+
 
         
         </Row>
