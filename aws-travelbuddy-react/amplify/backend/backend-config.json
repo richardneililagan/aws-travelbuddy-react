@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "awstravelbuddyreactff2f5191": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

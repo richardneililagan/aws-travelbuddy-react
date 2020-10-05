@@ -548,13 +548,13 @@ table th {
 .segment-links{ 
   display: flex;
   flex-direction: row;
-  justify-content: center;
   position: relative;
+  bottom:0%;
   left:3%;
   width: 18%;
   font-size: 16px;
   letter-spacing: 0.8px;
-  margin-top:2px;
+  margin-top:0.2%;
 
 }
 
@@ -1452,3 +1452,11 @@ color:#FF7B59;
   top:60%;
 }
 
+
+.amplify-authenticator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 100vh;
+}

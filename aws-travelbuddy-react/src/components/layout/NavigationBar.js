@@ -4,7 +4,11 @@ import LanguageIcon from '@material-ui/icons/Language';
 import Button from 'react-bootstrap/Button'
 import Divider from '@material-ui/core/Divider';
 import {SiFloatplane} from "react-icons/si"
-
+import PersonIcon from '@material-ui/icons/Person';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import { AmplifyAuthenticator, AmplifySignOut,AmplifyGreetings } from '@aws-amplify/ui-react';
+import { AuthState, onAuthUIStateChange } from '@aws-amplify/ui-components';
+import {Auth} from 'aws-amplify'; 
 
 const onClick = () => {
 
@@ -56,10 +60,12 @@ const onClick = () => {
 };
 
 
-const NavigationBar = () => {
-  const [click, setClick] = useState(false);
 
+const NavigationBar = (props) => {
+  const [click, setClick] = useState(false);
   const handleClick=()=> setClick(!click);
+
+  const [authState, setAuthState] = React.useState();
 
 
   return (
@@ -97,12 +103,18 @@ const NavigationBar = () => {
         <li className="nav-links-manage" >
           <Link to="/home">Manage</Link>
         </li>
-        {/* <Divider orientation="vertical" className="navbar-divider" flexItem style={{height:"24px"}} />  */}
-        <li className="nav-links-login" >
-        <Link to="/home">Login</Link>
-        </li>
-        <li className="nav-links-join" >
-        <Button variant="light" size="sm" className="join-button"> <p className="join-button-text"> <center> Join Free </center> </p></Button>         </li>
+        <Divider orientation="vertical" className="navbar-divider" flexItem style={{height:"24px"}} /> 
+
+
+     <li className="nav-links-login" >
+
+<Link to="/home"> <AccountCircleIcon style={{marginBottom:"3px", opacity:"0.7"}} /> {" "} {props.username} </Link>
+</li>
+
+<li className="nav-links-join" >
+   
+   <Button variant="light" size="sm" className="join-button" onClick={SignOutMethod}> <p className="join-button-text"> <center> Sign Out </center> </p></Button></li>
+
       </ul>
 
 
@@ -110,4 +122,8 @@ const NavigationBar = () => {
     </nav>
   )
 }
+const SignOutMethod = () => {
+  Auth.signOut();
+}
+
   export default NavigationBar;

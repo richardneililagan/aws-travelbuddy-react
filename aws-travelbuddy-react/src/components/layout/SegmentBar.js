@@ -46,7 +46,7 @@ const SegmentBar = () => {
   },[location]) 
 
 return (
-
+  <div> 
     <nav className="navbar">
       <ul className="segment-links">
       <li className="segment-links-specials">
@@ -81,6 +81,7 @@ return (
         </li>
       </ul>
     </nav>
+    </div>
 )
 }
 
