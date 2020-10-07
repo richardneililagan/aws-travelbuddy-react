@@ -5,6 +5,7 @@ import ApartmentIcon from '@material-ui/icons/Apartment';
 import LoyaltyIcon from '@material-ui/icons/Loyalty';
 import Divider from '@material-ui/core/Divider';
 
+
 const SegmentBar = () => {
 
   const [SpecialClassName, setSpecialClassName] = useState('activated-tab')

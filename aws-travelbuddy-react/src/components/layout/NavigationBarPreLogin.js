@@ -1,11 +1,11 @@
 import React, { Fragment, useState } from "react";
-import { Link } from "react-router-dom";
 import LanguageIcon from '@material-ui/icons/Language';
 import Button from 'react-bootstrap/Button'
 import Divider from '@material-ui/core/Divider';
 import {SiFloatplane} from "react-icons/si"
 import PersonIcon from '@material-ui/icons/Person';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+
 const onClick = () => {
 
   const nav = document.querySelector(".navbar-logo");
@@ -55,7 +55,9 @@ const onClick = () => {
   }
 };
 
-const NavigationBar = (props) => {
+
+
+const NavigationBarPreLogin = (props) => {
   const [click, setClick] = useState(false);
   const handleClick=()=> setClick(!click);
 
@@ -63,10 +65,10 @@ const NavigationBar = (props) => {
     <nav className="navbar">
       <ul className="nav-links">
       <li className="nav-links-homepage">
-          <Link to="/home" activeClassName="currentlyOn" style={{letterSpacing:"2px",fontSize:"20px", fontWeight:"bolder", textShadow:"0px 0px, 0px 0px, 10.5x 0px"}}>
+          <a to="/home" activeClassName="currentlyOn" style={{letterSpacing:"2px",fontSize:"20px", fontWeight:"bolder", textShadow:"0px 0px, 0px 0px, 10.5x 0px", opacity:"0.6"}}>
             <SiFloatplane className="nav-icon" style={{marginRight:"5px", marginBottom:"4px"}} /> 
             TravelBuddy 
-          </Link>{" "}
+          </a>{" "}
         </li>
 
       </ul>
@@ -82,37 +84,31 @@ const NavigationBar = (props) => {
       <ul className="navbar-logo">
       <li className="nav-links-lang">
         <LanguageIcon fontSize="small" style={{marginBottom:'2px', opacity:'0.8', marginRight:"1px"}} /> {'  '}
-          <Link to="/home">
+          <a to="/home">
             English (UK)
-          </Link>{" "}
+          </a>{" "}
         </li>
       <li className="nav-links-loyalty" >
-          <Link to="/home">
+          <a to="/home">
             Loyalty
-          </Link>{" "}
+          </a>{" "}
         </li>
         <li className="nav-links-manage" >
-          <Link to="/home">Manage</Link>
+          <a to="/home">Manage</a>
         </li>
         <Divider orientation="vertical" className="navbar-divider" flexItem style={{height:"24px"}} /> 
 
-
-     <li className="nav-links-login" >
-
-<Link to="/home"> <AccountCircleIcon style={{marginBottom:"3px", opacity:"0.7"}} /> {" "} {props.username} </Link>
-</li>
-
 <li className="nav-links-join" >
    
-   <Button variant="light" size="sm" className="join-button" onClick={props.signOutMethod}> <p className="join-button-text"> <center> Sign Out </center> </p></Button></li>
+   <Button variant="light" size="sm" className="join-button"> <p className="join-button-text"> <center> Join Free </center> </p></Button></li>
 
       </ul>
 
-
       </Fragment>
+
     </nav>
   )
 }
 
 
-  export default NavigationBar;
+  export default NavigationBarPreLogin;

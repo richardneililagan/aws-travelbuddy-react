@@ -580,14 +580,16 @@ letter-spacing:2px;
 filter:brightness(2)
 
 }
-
-
 .banner-text-secondary {
   font-size:33px;
   font-family:Roboto;
   font-weight:bold;
   color:white
 
+}
+
+.banner-text-secondary:hover{
+  color:#FF7B59
 }
 
 
@@ -629,7 +631,7 @@ filter:brightness(2)
   }
 
   .navbar-logo {
-    width: 36%;
+    width: 42%;
     right:0%;
   }
   .segment-links{ 
@@ -637,8 +639,8 @@ filter:brightness(2)
     flex-direction: row;
     justify-content: center;
     position: relative;
-    left:2%;
-    width: 39%;
+    left:3%;
+    width: 32%;
     font-size: 16px;
     letter-spacing: 0.8px;
     margin-top:2px;
@@ -653,7 +655,7 @@ filter:brightness(2)
     left: 0;
   }
   .navbar-logo {
-    width: 43%;
+    width: 48%;
     right:0%;
   }
   
@@ -667,8 +669,20 @@ filter:brightness(2)
   }
 
   .navbar-logo {
-    width:53%;
+    width:70%;
     right:0%;
+  }
+
+  .segment-links{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    left:2%;
+    width: 40%;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+
   }
 
 }
@@ -851,7 +865,6 @@ filter:brightness(2)
       color:white
     
     }
-
 
     
 
@@ -1460,3 +1473,18 @@ color:#FF7B59;
   flex: 1;
   height: 100vh;
 }
+
+.chatbot{
+	position:absolute; 
+	width:100px;
+	height:100px;
+	top:-5vh;
+	right:-88%;
+
+
+}
+
+.amplify-form-container{
+  height:490px
+}
+

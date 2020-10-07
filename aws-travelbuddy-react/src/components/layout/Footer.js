@@ -12,6 +12,12 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 import CustomChatBot from "../chatbot/CustomChatBot";
+import { ChatBot, AmplifyTheme } from 'aws-amplify-react';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
+import Popover from 'react-bootstrap/Popover'
+import Fab from '@material-ui/core/Fab';
+import { makeStyles } from '@material-ui/core/styles';
+import NavigationIcon from '@material-ui/icons/Navigation';
 
 // const downloadQR = () => {
 //     const canvas = document.getElementById("123456");
@@ -26,7 +32,43 @@ import CustomChatBot from "../chatbot/CustomChatBot";
 //     document.body.removeChild(downloadLink);
 //   };
 
+
+const handleComplete=(err, confirmation)=>{
+  if (err) {
+    alert('Bot conversation failed')
+    return;
+  }
+
+  alert('Success: ' + JSON.stringify(confirmation, null, 2));
+  return 'Trip booked. Thank you! what would you like to do next?';
+}
+
+const myTheme = {
+  ...AmplifyTheme,
+  sectionHeader: {
+    ...AmplifyTheme.sectionHeader,
+    backgroundColor: '#ff6600',
+  },
+  container:{
+    ...AmplifyTheme.container,
+    width:"1000px",
+  }
+};
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    '& > *': {
+      margin: theme.spacing(1),
+    },
+  },
+  extendedIcon: {
+    marginRight: theme.spacing(1),
+  },
+}));
+
+
 const Footer = () => {
+  const classes = useStyles();
   return (
     <FooterContainer className="main-footer">
       <div className="footer-middle">
@@ -38,10 +80,6 @@ const Footer = () => {
             <Col xs={2} xl={1}> 
             </Col>
             </Row> 
-
-
-
-
             <hr />
      
           <div className="row">
@@ -195,13 +233,36 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <CustomChatBot/>
-    </FooterContainer>
+      {/* <CustomChatBot/> */}
+
+<OverlayTrigger
+      trigger="click"
+      placement="left-end"
+      overlay={
+        <Popover>
+          <ChatBot
+            title="TravelBuddy Chatbot"
+            theme={myTheme}
+            botName="BookTrip_dev"
+            welcomeMessage="Welcome! I am a chatbot created with AWS Lex, how can I help you today?"
+            onComplete={handleComplete}
+            clearOnComplete={true}
+            conversationModeOn={true}
+            className="chatbot-box"
+            />
+        </Popover>
+      }
+>
+    <Fab variant="extended" className="chatbot" position="right-bottom">
+        <NavigationIcon className={classes.extendedIcon} />
+        Contact Us{"  "}
+      </Fab>
+</OverlayTrigger>
+
+  </FooterContainer>
   );
 };
-
 export default Footer; 
-
 const FooterContainer = styled.footer`
 
 .container{

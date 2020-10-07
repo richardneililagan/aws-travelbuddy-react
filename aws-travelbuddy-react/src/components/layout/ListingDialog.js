@@ -11,7 +11,6 @@ import Col from "react-bootstrap/Col"
 import Container from "react-bootstrap/Container"
 import {IoIosArrowDown,IoIosArrowUp} from "react-icons/io"
 import {TiPlane} from "react-icons/ti"
-import {AiTwotoneCiCircle} from "react-icons/ai"
 import {ImCross} from "react-icons/im"
 import {FaMapPin} from "react-icons/fa"
 import {RiBuilding2Fill, RiBuildingFill}  from "react-icons/ri"
@@ -29,9 +28,6 @@ export const ListingDialog = (props) => {
 
   const [AccordionState, setAccordionState] = useState(true)
   const ListingType = props.ListingType;
-
-  console.log(props.journey_timeline)
-  console.log(props.journey_map)
 
   var d = new Date(0); 
   d.setUTCSeconds(props.arrival_date)
