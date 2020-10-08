@@ -34,8 +34,8 @@ const SignInComponent = (props) => {
             password: password
         })
         .then(() => {
-            props.signInMethod();
             props.setUsernameMethod(username);
+            props.signInMethod();
             setIsLoading(false)
         })
     

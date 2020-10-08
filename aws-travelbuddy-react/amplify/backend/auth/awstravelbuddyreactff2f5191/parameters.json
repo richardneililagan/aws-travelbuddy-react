@@ -1,6 +1,6 @@
 {
     "identityPoolName": "awstravelbuddyreactff2f5191_identitypool_ff2f5191",
-    "allowUnauthenticatedIdentities": true,
+    "allowUnauthenticatedIdentities": false,
     "resourceNameTruncated": "awstraff2f5191",
     "userPoolName": "awstravelbuddyreactff2f5191_userpool_ff2f5191",
     "autoVerifiedAttributes": [

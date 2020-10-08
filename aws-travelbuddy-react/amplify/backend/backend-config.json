@@ -13,5 +13,11 @@
       "providerPlugin": "awscloudformation",
       "build": true
     }
+  },
+  "storage": {
+    "profileimgstore": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }

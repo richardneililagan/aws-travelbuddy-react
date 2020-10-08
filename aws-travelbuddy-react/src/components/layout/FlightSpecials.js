@@ -43,7 +43,6 @@ const FlightSpecials = () => {
             <h1 className="landing-main-text">FLIGHT SPECIALS</h1> 
             <Link to="/flight" style={{color:"black"}}> <h3 className='landing-secondary-text' style={{marginTop:"10px"}}>View all Flights<IoIosArrowForward/></h3> </Link>
 
-
               <Slider {...settings} className="slider-div-flight">
                 {saleFlights.map((flight) => (
                   <FlightCard
@@ -60,7 +59,6 @@ const FlightSpecials = () => {
                   special_time_remaining={flight.special_time_remaining}
                   journey_map={flight.journey_map}
                   journey_timeline={flight.journey_timeline}
-                  
                   />
         ))}
               </Slider>

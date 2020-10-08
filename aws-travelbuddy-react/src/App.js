@@ -22,7 +22,7 @@ const App = () => {
   const [authState, setAuthState] = React.useState();
   const [user, setUser] = React.useState();
   const [signedIn, setSignedin] = React.useState(false); 
-  const [username , setUsername] = React.useState("Test");
+  const [username , setUsername] = React.useState("");
 
   React.useEffect(() => {
       return onAuthUIStateChange((nextAuthState, authData) => {

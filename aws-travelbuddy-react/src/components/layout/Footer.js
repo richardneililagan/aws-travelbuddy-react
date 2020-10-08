@@ -7,10 +7,8 @@ import EmailIcon from "@material-ui/icons/Email";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import TelegramIcon from "@material-ui/icons/Telegram";
 import QRCode from "qrcode.react";
-
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
 import CustomChatBot from "../chatbot/CustomChatBot";
 import { ChatBot, AmplifyTheme } from 'aws-amplify-react';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
