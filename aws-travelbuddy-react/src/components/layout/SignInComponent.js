@@ -82,7 +82,7 @@ const SignInComponent = (props) => {
         <Form>
   <Form.Group controlId="formBasicEmail">
     {/* <Form.Label>Email address</Form.Label> */}
-    <Form.Control style={{padding:"5%", fontSize:"14px"}}  type="email" placeholder="Enter your password" onChange={passwordInput} />
+    <Form.Control style={{padding:"5%", fontSize:"14px"}}  type="password" placeholder="Enter your password" onChange={passwordInput} />
     <Form.Text className="text-muted">
       Forgot your password? Reset password.
     </Form.Text>

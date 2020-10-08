@@ -147,7 +147,7 @@ const SignUpComponent = (props) => {
         <Col xs={6} md={6} xl={5}> 
         <Form>
   <Form.Group controlId="formBasicEmail">
-    <Form.Control style={{padding:"7%", fontSize:"14px"}}  type="name" placeholder="Enter a password" onChange={passwordInput} />
+    <Form.Control style={{padding:"7%", fontSize:"14px"}}  type="password" placeholder="Enter a password" onChange={passwordInput} />
   </Form.Group>
   </Form>
 
