@@ -7,7 +7,7 @@
 
 /* Global Styles */
 :root {
-  --primary-color: #dc3545;
+  --primary-color: #1B3752;
   --dark-color: #333333;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
@@ -28,7 +28,6 @@
   line-height: 1.6;
   background-color: #fff;
   color: #333;
-  
 } */
 
 a {
@@ -669,7 +668,7 @@ filter:brightness(2)
   }
 
   .navbar-logo {
-    width:70%;
+    width:62%;
     right:0%;
   }
 
@@ -679,7 +678,7 @@ filter:brightness(2)
     justify-content: center;
     position: relative;
     left:2%;
-    width: 40%;
+    width: 35%;
     font-size: 15px;
     letter-spacing: 0.5px;
 
@@ -761,7 +760,7 @@ filter:brightness(2)
     justify-content: center;
     position: relative;
     left:1%;
-    width: 60%;
+    width: 48%;
     font-size: 16px;
     font-style: lighter;
     letter-spacing: 2px;

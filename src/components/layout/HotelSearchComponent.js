@@ -56,7 +56,7 @@ return(
 
 </Col>
 <Col xl={2}> 
-<Button variant="outline-secondary" className="search-button"><center> <h4 style={{marginTop:"6px", fontSize:'18px', color:'black'}}> Search </h4></center> </Button>{' '}
+<Button variant="outline-secondary" className="search-button" style={{ border:"solid 1px" }}><center> <h4 style={{marginTop:"6px", fontSize:'18px', color:'black'}}> Search </h4></center> </Button>{' '}
 </Col> 
 </Row> 
 
