@@ -105,22 +105,22 @@ const SignUpComponent = (props) => {
     <Container> 
     <Row style={{marginTop:"30px"}}> 
         <Col xl={5}> 
-        <Form>
+        <Form onSubmit={e => { e.preventDefault() }} >
         <Form.Group controlId="formBasicEmail">
         <Form.Text className="text-muted">
       Enter your username
     </Form.Text>
-            <Form.Control style={{padding:"5%", fontSize:"14px"}} type="name" placeholder="Enter a username" onChange={usernameInput} />
+            <Form.Control style={{padding:"5%", fontSize:"14px"}} type="name" placeholder="Enter a username" onChange={usernameInput} onKeyPress={e => { if (e.key==='Enter') {triggerconfirmSignUp()}}}/>
         </Form.Group>
         </Form>
         </Col>
         <Col xl={5}> 
-        <Form>
+        <Form onSubmit={e => { e.preventDefault() }} >
   <Form.Group>
   <Form.Text className="text-muted">
       Enter the confirmation code sent to your email 
     </Form.Text>
-    <Form.Control style={{padding:"5%", fontSize:"14px"}}  type="name" placeholder="Enter confirmation code" onChange={confirmationInput} />
+    <Form.Control style={{padding:"5%", fontSize:"14px"}}  type="name" placeholder="Enter confirmation code" onChange={confirmationInput} onKeyPress={e => { if (e.key==='Enter') {triggerconfirmSignUp()}}}/>
   </Form.Group>
   </Form>
 
@@ -137,17 +137,17 @@ const SignUpComponent = (props) => {
     <Container> 
     <Row style={{marginTop:"30px"}}> 
         <Col xs={6} md={6} xl={5}> 
-        <Form>
+        <Form onSubmit={e => { e.preventDefault() }} >
         <Form.Group controlId="formBasicEmail">
-            <Form.Control style={{padding:"7%", fontSize:"14px"}} type="name" placeholder="Enter a username" onChange={usernameInput} />
+            <Form.Control style={{padding:"7%", fontSize:"14px"}} type="name" placeholder="Enter a username" onChange={usernameInput} onKeyPress={e => { if (e.key==='Enter') {triggerSignUp()}}} />
 
         </Form.Group>
         </Form>
         </Col>
         <Col xs={6} md={6} xl={5}> 
-        <Form>
+        <Form onSubmit={e => { e.preventDefault() }} >
   <Form.Group controlId="formBasicEmail">
-    <Form.Control style={{padding:"7%", fontSize:"14px"}}  type="password" placeholder="Enter a password" onChange={passwordInput} />
+    <Form.Control style={{padding:"7%", fontSize:"14px"}}  type="password" placeholder="Enter a password" onChange={passwordInput} onKeyPress={e => { if (e.key==='Enter') {triggerSignUp()}}} />
   </Form.Group>
   </Form>
 
@@ -158,16 +158,16 @@ const SignUpComponent = (props) => {
 
 <Row > 
         <Col  xs={6} md={6} xl={5}> 
-        <Form>
+        <Form onSubmit={e => { e.preventDefault() }} >
         <Form.Group controlId="formBasicEmail">
-            <Form.Control style={{padding:"7%", fontSize:"14px"}} type="email" placeholder="Enter your email" onChange={emailInput} />
+            <Form.Control style={{padding:"7%", fontSize:"14px"}} type="email" placeholder="Enter your email" onChange={emailInput} onKeyPress={e => { if (e.key==='Enter') {triggerSignUp()}}}/>
         </Form.Group>
         </Form>
         </Col>
         <Col  xs={6} md={6} xl={5}> 
-        <Form>
+        <Form onSubmit={e => { e.preventDefault() }} >
   <Form.Group controlId="formBasicEmail">
-    <Form.Control style={{padding:"7%", fontSize:"14px"}}  type="name" placeholder="Enter your phone number" onChange={phoneInput} />
+    <Form.Control style={{padding:"7%", fontSize:"14px"}}  type="name" placeholder="Enter your phone number" onChange={phoneInput} onKeyPress={e => { if (e.key==='Enter') {triggerSignUp()}}}/>
   </Form.Group>
   </Form>
 
