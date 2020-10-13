@@ -68,7 +68,7 @@ const NavigationBar = (props) => {
   const [profileModal, setprofileModal] = useState(false);
   const [isLoading, setisLoading] = useState(false);
   const [photoUploaded, setphotoUploaded] = useState(false)
-
+  const [isError, setisError] = useState(false)
   const isLoadingMethod = () => {
     if (isLoading===true) {
 return (
@@ -103,25 +103,32 @@ return (
 
   const handleFileChange=e=>{
     const file = e.target.files[0]
+    console.log("File Type",file.type)
+    if (file.type == "image/jpeg" || file.type=="image/png") {
+      setisError(false); 
     setprofileState({
       fileUrl:URL.createObjectURL(file),
       file,
       filename:props.username
     })
+  } else { 
+    setisError(true); 
   }
+}
 
   const saveFile=()=>{
-    setisLoading(true)
-  Storage.put(profileState.filename, profileState.file)
-    .then(()=>{
-      console.log("Successfully saved file!")
-      setisLoading(false);
-      setphotoUploaded(true);
-      
-    })
-    .catch(err=>{
-      console.log("Error uploading file", err)
-    })
+    if (profileState.fileUrl!=='') {
+      setisLoading(true)
+      Storage.put(profileState.filename, profileState.file)
+        .then(()=>{
+          console.log("Successfully saved file!")
+          setisLoading(false);
+          setphotoUploaded(true);
+        })
+        .catch(err=>{
+          console.log("Error uploading file", err)
+        })
+    }
   }
 
   const showProfilepic=()=>{
@@ -130,13 +137,15 @@ return (
         <Link to="/home" onClick={profileOpen}> <AccountCircleIcon style={{marginBottom:"3px", opacity:"0.7"}} />  {props.username} </Link>
       )
     }
-    else {
+    else if (photoUploaded===true) {
       return (
-        <Link to="/home" onClick={profileOpen}>  <Image src={profileState.fileUrl} roundedCircle style={{height:'23px',width:"23px", marginRight:"5px", marginBottom:"5px"}} /> {props.username} </Link>
+        <Link to="/home" onClick={profileOpen}>  <Image src={profileState.fileUrl} roundedCircle style={{height:'23px',width:"23px", marginRight:"5px", marginBottom:"2px"}} /> {props.username} </Link>
       )
     }
   }
+  
   useEffect(() => {
+    
     Storage.list('',{level :'public'})
       .then(result => {
         result.map((key) => {
@@ -162,29 +171,44 @@ return (
   
   const onDrop = useCallback(e => {
     const file = e[0];
+    if (file.type == "image/jpeg" || file.type=="image/png") {
+    setisError(false); 
     setprofileState({
       fileUrl:URL.createObjectURL(file),
       file,
       filename:props.username
     });
     setphotoUploaded(true)
+  } else {
+    setisError(true)
+  }
   }, [])
   const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
 
   const showProfilePic = () =>{
-    if (photoUploaded===true){
+    if (photoUploaded===true && isError ===false){
       return(
         <> 
 <Row style={{padding:"5%"}}> 
-      <h1 style={{color:"grey", fontSize:"17px", textAlign:"center"}}> Your profile picture: </h1>
+      <h1 style={{color:"grey", fontSize:"17px", textAlign:"center"}}> Your profile picture</h1>
     </Row>
-    <Container style={{margin:"auto",width:"50%"}}> 
-    <Image src={profileState.fileUrl} roundedCircle/>
+    <Row> 
+      <Col></Col>
+    <Col><Image src={profileState.fileUrl} roundedCircle style={{height:"100%"}} /></Col> 
+    <Col></Col>
       {/* <img src ={profileState.fileUrl}/> */}
-    </Container> 
+    </Row> 
     </> 
       )
-    }else{
+    }else if (isError === true){
+      return (
+        <Row style={{padding:"5%"}}> 
+        <Col xl={2}></Col>
+        <Col xl={8}><h1 style={{color:"grey", fontSize:"17px", textAlign:"center"}}>Invalid File Type!</h1></Col>
+        <Col xl={2}></Col>
+    </Row>
+      )
+    } else {
       return (
         <>
 <Row style={{padding:"5%"}}> 
@@ -268,7 +292,7 @@ return (
         </Modal.Header>
 
         <Modal.Body>  
-      <div style={{height:"400px",width:"500px"}}> 
+    <div style={{height:"350px",width:"500px"}}> 
     <div {...getRootProps()}>
       <input {...getInputProps()} />
       {
@@ -276,7 +300,7 @@ return (
           (
             <div 
             style={{
-              border: 'dashed grey 4px',
+              border: 'dashed lightgrey 4px',
               backgroundColor: 'rgba(255,255,255,.8)',
               position: 'absolute',
               alignContent:'center',
@@ -303,11 +327,9 @@ return (
                 width:"90%",
               }}
             >
-              <div>
+              <div style={{opacity:"0.5"}}>
                 <p><IoMdPhotos/></p>
                 <h1 style={{fontSize:"20px"}}> Drag and drop your photo here!</h1>
-                <h2 style={{fontSize:"15px"}} > -- or -- </h2>
-                <h5 style={{marginLeft:"80px", width:"100px"}}><input type="file" onChange={handleFileChange} style={{width:"240px"}}/></h5>  
               </div>
             </div>
           </div>
@@ -328,7 +350,6 @@ return (
               zIndex: 9999,
               height:"50%",
               width:"90%",
-              // padding:"5%"
             }}
           >
             <div 
@@ -350,8 +371,9 @@ return (
           </div>
           )
       }
-    </div>         
+    </div>        
     </div> 
+    
     {showProfilePic()}
         </Modal.Body>
         <Modal.Footer >
