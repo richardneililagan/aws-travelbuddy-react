@@ -45,11 +45,11 @@ const SignInComponent = (props) => {
     const getButton=()=>{
         if (isLoading===false && isError ===false){
             return (
-                <Button variant="light" type="submit" style={{width:"150px", height:"45px", backgroundColor:"#FF7B59", border:"none"}} onClick ={triggerSignIn}><b> Sign In </b></Button>
+                <Button variant="light" type="submit" style={{width:"150px", height:"44px", backgroundColor:"#FF7B59", border:"none"}} onClick ={triggerSignIn}><b> Sign In </b></Button>
                 )}
         else if (isLoading===true && isError ===false){
             return (
-                <Button variant="light" type="submit" style={{width:"150px", height:"45px", backgroundColor:"#FF7B59", border:"none"}} onClick ={triggerSignIn} >      
+                <Button variant="light" type="submit" style={{width:"150px", height:"44px", backgroundColor:"#FF7B59", border:"none"}} onClick ={triggerSignIn} >      
                 <Spinner
                   as="span"
                   animation="border"
@@ -91,7 +91,7 @@ const SignInComponent = (props) => {
   </Form>
 
 </Col>
-<Col xl={2}> 
+<Col xl={1} style={{marginTop:"19px"}}> 
 {getButton()}
 </Col> 
 </Row> 

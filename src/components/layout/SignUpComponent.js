@@ -125,8 +125,8 @@ const SignUpComponent = (props) => {
   </Form>
 
 </Col>
-<Col xl={2}> 
-<Button variant="light" type="submit" style={{width:"150px", height:"45px", backgroundColor:"#FF7B59", border:"none", marginTop:"23px"}} onClick={triggerconfirmSignUp}>Confirm Sign Up</Button>
+<Col xl={2} style={{marginTop:"19px"}}> 
+<Button variant="light" type="submit" style={{width:"180px", height:"45px", backgroundColor:"#FF7B59", border:"none", marginTop:"23px", fontSize:"14px"}} onClick={triggerconfirmSignUp}>Confirm Sign Up</Button>
 </Col> 
 </Row>
 
@@ -172,7 +172,7 @@ const SignUpComponent = (props) => {
   </Form>
 
 </Col>
-<Col xl={2}> 
+<Col xl={2} style={{marginTop:"17px"}}> 
 {getButton()};
 </Col> 
 </Row> 
