@@ -74,7 +74,7 @@ return (
 
 <h1 className="flight-hovered-text-tertiary"> 
 {/* <a style={{color:"#FF7B59"}}> <u> 2 </u> </a> deals to go! */}
-<a style={{color:"#FF7B59"}}> <Button variant="outline-light" onClick={handleOpen} style={{width:"150px"}}>Find out More!</Button> </a>
+<a style={{color:"#FF7B59"}}> <Button variant="outline-light" onClick={handleOpen} style={{fontSize:'14px'}}>Find out More!</Button> </a>
 </h1> 
 </div>
     )}
@@ -87,7 +87,7 @@ return (
                     </h1>{" "}
 
                     { props.special ? (
-                   <h5 style={{float:'right'}}> <span class="badge badge-pill badge-success box-secondary-badge flight-box-secondary-text" style={{backgroundColor:'#017864'}}> Best Value! </span> <br/> <p className="flight-box-secondary-text" > from ${props.price} </p> </h5>
+                   <h5 style={{float:'right'}}> <span class="badge badge-pill badge-success box-secondary-badge flight-box-secondary-text" style={{fontSize:"14px", color:"white"}}> Best Value! </span> <br/> <p className="flight-box-secondary-text" > from ${props.price} </p> </h5>
 
                     ) : (
 

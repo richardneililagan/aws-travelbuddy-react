@@ -71,7 +71,7 @@ return (
 <h1 className="hovered-text-secondary"> Deluxe Room with Garden View <br/> Free Buffet Breakast <br/> Min. 3 Nights</h1> 
 <h1 className="hovered-text-tertiary"> 
 
-<a style={{color:"#FF7B59"}}> <Button variant="outline-light" onClick={handleOpen} style={{width:"130px"}}>Find out More!</Button> </a>
+<a style={{color:"#FF7B59"}}> <Button variant="outline-light" onClick={handleOpen} style={{fontSize:'14px'}}>Find out More!</Button> </a>
 
 
 </h1> 
@@ -88,7 +88,7 @@ return (
               </h1>{" "}
 
               { props.special ? (
-              <h5 style={{float:'right'}}> <span class="badge badge-pill badge-success box-secondary-badge" style={{backgroundColor:'#017864'}}> Best Value! </span> <br/> <p className="hotel-box-secondary-text" style={{float:"right"}}>  ${props.price} / night</p> </h5>
+              <h5 style={{float:'right'}}> <span class="badge badge-pill badge-success box-secondary-badge" style={{fontSize:"14px", color:"white",backgroundColor:'#017864'}}> Best Value! </span> <br/> <p className="hotel-box-secondary-text" style={{float:"right"}}>  ${props.price} / night</p> </h5>
               ) : (
                 <h5 style={{float:'right'}}><br/> <p className="hotel-box-secondary-text" style={{float:"right"}}>  ${props.price} / night</p> </h5>
                 )}
