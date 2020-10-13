@@ -1,0 +1,75 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-awstravelbuddyreact-dev-131246-authRole",
+      "UnauthRoleArn": "arn:aws:iam::891048848327:role/amplify-awstravelbuddyreact-dev-131246-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::891048848327:role/amplify-awstravelbuddyreact-dev-131246-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-awstravelbuddyreact-dev-131246-deployment",
+      "UnauthRoleName": "amplify-awstravelbuddyreact-dev-131246-unauthRole",
+      "StackName": "amplify-awstravelbuddyreact-dev-131246",
+      "StackId": "arn:aws:cloudformation:us-east-1:891048848327:stack/amplify-awstravelbuddyreact-dev-131246/6b17ff20-06c9-11eb-84af-0ad4194c8c9d",
+      "AmplifyAppId": "dq8t7fhfsvg36"
+    }
+  },
+  "auth": {
+    "awstravelbuddyreactff2f5191": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-awstravelbuddyreact-dev-131246-deployment/amplify-cfn-templates/auth/awstravelbuddyreactff2f5191-cloudformation-template.yml",
+        "logicalId": "authawstravelbuddyreactff2f5191"
+      },
+      "lastPushTimeStamp": "2020-10-07T04:44:01.855Z",
+      "output": {
+        "AppClientSecret": "1a9ipodbaqsgl9tmnpmvee56sh285th1aq2cjpm8vfr99dtim6t5",
+        "UserPoolId": "us-east-1_7gnjW3611",
+        "AppClientIDWeb": "612m7bhde16g921o83g4jgh7p2",
+        "AppClientID": "2si1dknqbhr96pv7jhm27k5ltg",
+        "IdentityPoolId": "us-east-1:10a62a35-fb18-44a5-a002-98eda874ed0a",
+        "IdentityPoolName": "awstravelbuddyreactff2f5191_identitypool_ff2f5191__dev",
+        "UserPoolName": "awstravelbuddyreactff2f5191_userpool_ff2f5191"
+      },
+      "lastPushDirHash": "B5//S+oWwCWslNAkcsTCRrR1DZU="
+    }
+  },
+  "interactions": {
+    "BookTripChatBot": {
+      "service": "Lex",
+      "providerPlugin": "awscloudformation",
+      "build": true,
+      "lastBuildTimeStamp": "2020-10-05T10:10:24.229Z",
+      "lastPackageTimeStamp": "2020-10-05T10:10:24.282Z",
+      "distZipFilename": "BookTripChatBot-492b4556342f326a4c55-build.zip",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-awstravelbuddyreact-dev-131246-deployment/amplify-cfn-templates/interactions/BookTripChatBot-cloudformation-template.json",
+        "logicalId": "interactionsBookTripChatBot"
+      },
+      "lastPushTimeStamp": "2020-10-07T04:44:01.848Z",
+      "output": {
+        "FunctionArn": "arn:aws:lambda:us-east-1:891048848327:function:awstravelbuddyreact_cfnlambda_851d8f8e-dev",
+        "Region": "us-east-1",
+        "BotName": "BookTrip_dev"
+      },
+      "lastPushDirHash": "fEfWUqwe6ZsjM9zaPRR7Qc26j0M="
+    }
+  },
+  "storage": {
+    "profileimgstore": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-awstravelbuddyreact-dev-131246-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+        "logicalId": "storageprofileimgstore"
+      },
+      "lastPushTimeStamp": "2020-10-07T04:44:01.855Z",
+      "output": {
+        "BucketName": "travelbuddy-profileimgstore131246-dev",
+        "Region": "us-east-1"
+      },
+      "lastPushDirHash": "ei2ktgWYH/nuBwryfv5jEIHdgbE="
+    }
+  }
+}
