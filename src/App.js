@@ -20,6 +20,7 @@ import { AuthState, onAuthUIStateChange } from '@aws-amplify/ui-components';
 
 Amplify.configure(awsconfig);
 
+
 const App = () => {
   const [authState, setAuthState] = React.useState();
   const [user, setUser] = React.useState();
@@ -39,7 +40,6 @@ const App = () => {
   const signInMethod = () => {
     setAuthState("signedin");  
   }
-
 
   const setUsernameMethod = (name) => {
     setUsername(name);
@@ -67,7 +67,6 @@ const App = () => {
         </Switch>
         <Footer />
       </Router>
-      <AmplifyAuthenticator/> 
     </Fragment>
   </div>
     )
