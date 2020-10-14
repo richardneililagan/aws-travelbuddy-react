@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useEffect, useState} from 'react';
 import Form from 'react-bootstrap/Form'
 import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col"
@@ -14,9 +14,27 @@ import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
 
 import flightsData from "../data/flights.json"
+import useWindowDimensions from "../function/useWindowDimensions";
 
 
 const FlightSearchComponent = () => { 
+
+  const { width } = useWindowDimensions();
+  const [gridTemplateColumns, setgridTemplateColumns] = useState("1fr 1fr");
+
+  useEffect(() => {
+    function handleResize() {
+      window.addEventListener("resize", handleResize);
+    }
+    handleResize();
+    if (width > 1200) {
+      setgridTemplateColumns("1fr 1fr");
+    } else {
+      setgridTemplateColumns("1fr");
+    }
+  },[width]);
+
+
 
   const useStyles = makeStyles((theme) => ({
     formControl: {
@@ -103,7 +121,7 @@ return(
 <Container fluid
         style={{
           display: "grid",
-          gridTemplateColumns:"1fr 1fr",
+          gridTemplateColumns:gridTemplateColumns,
           gridGap: "2%",
           padding: "3%",
           overflowY: "hidden",
@@ -114,7 +132,6 @@ return(
         }}
 >
           {flightsData.available_flights.map((flight) => (
-
             <FlightCard
             origin={flight.origin}
             destination={flight.destination}
@@ -130,13 +147,11 @@ return(
             journey_map={flight.journey_map}
             journey_timeline={flight.journey_timeline}
             />
-      
         ))}
 
 </Container>
     </Fragment>
-)
-
+ )
 }
 
 export default FlightSearchComponent; 

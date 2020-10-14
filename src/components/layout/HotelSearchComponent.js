@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useState, useEffect} from 'react';
 import Form from 'react-bootstrap/Form'
 import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col"
@@ -13,9 +13,25 @@ import FormControl from "@material-ui/core/FormControl";
 import MenuItem from "@material-ui/core/MenuItem";
 import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
+import useWindowDimensions from "../function/useWindowDimensions";
 
 
 const HotelSearchComponent = () => { 
+  const { width } = useWindowDimensions();
+  const [gridTemplateColumns, setgridTemplateColumns] = useState("1fr 1fr 1fr");
+  useEffect(() => {
+    function handleResize() {
+      window.addEventListener("resize", handleResize);
+    }
+    handleResize();
+    if (width > 1200) {
+      setgridTemplateColumns("1fr 1fr 1fr");
+    } else if (width<1200 && width>900) {
+      setgridTemplateColumns("1fr 1fr");
+    } else {
+      setgridTemplateColumns("1fr");
+    }
+  },[width]);
 
   const useStyles = makeStyles((theme) => ({
     formControl: {
@@ -80,7 +96,7 @@ return(
 <Container fluid
         style={{
           display: "grid",
-          gridTemplateColumns:"1fr 1fr 1fr",
+          gridTemplateColumns:gridTemplateColumns,
           gridGap: "2%",
           padding: "3%",
           overflowY: "hidden",

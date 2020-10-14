@@ -992,7 +992,7 @@ float:left;
 font-family: Roboto;
 font-style: normal;
 font-weight: 900;
-font-size: 25px;
+font-size: 23px;
 line-height: 33px;
 
 }
@@ -1003,7 +1003,7 @@ line-height: 33px;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 23px;
   line-height: 28px;
   margin-top:3%;
 
@@ -1015,8 +1015,8 @@ line-height: 33px;
       font-family: Roboto;
       font-style: normal;
       font-weight: bolder;
-      font-size: 24px;
-      line-height: 28px;
+      font-size: 21px;
+      line-height: 18px;
       margin-right:-4px;
       
 }
@@ -1094,10 +1094,9 @@ line-height: 33px;
   font-family: Roboto;
   font-style: normal;
   font-weight: 900;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 33px;
   letter-spacing: 0.5px;
-  
   }
   
   .hotel-box-secondary-text {
@@ -1213,7 +1212,7 @@ line-height: 33px;
         font-family: Roboto;
         font-style: normal;
         font-weight: 900;
-        font-size: 23px;
+        font-size: 22px;
         line-height: 33px;
         
         }
@@ -1224,7 +1223,7 @@ line-height: 33px;
           font-family: Roboto;
           font-style: normal;
           font-weight: bold;
-          font-size: 24px;
+          font-size: 22px;
           line-height: 26px;
           margin-top:3%;
         
