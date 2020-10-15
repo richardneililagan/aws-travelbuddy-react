@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, Fragment} from "react";
 import { Link, useLocation } from "react-router-dom";
 import LocalAirportIcon from '@material-ui/icons/LocalAirport';
 import ApartmentIcon from '@material-ui/icons/Apartment';
@@ -47,7 +47,7 @@ const SegmentBar = () => {
   },[location]) 
 
 return (
-  <div> 
+  <Fragment> 
     <nav className="navbar">
       <ul className="segment-links">
       <li className="segment-links-specials">
@@ -82,7 +82,7 @@ return (
         </li>
       </ul>
     </nav>
-    </div>
+    </Fragment>
 )
 }
 

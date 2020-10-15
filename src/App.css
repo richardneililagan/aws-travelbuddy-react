@@ -548,11 +548,12 @@ table th {
   display: flex;
   flex-direction: row;
   position: relative;
-  bottom:0%;
+  /* bottom:0%; */
   left:3%;
   width: 18%;
   font-size: 16px;
   letter-spacing: 0.8px;
+  /* bottom:0px;  */
   margin-top:0.1%;
 
 }

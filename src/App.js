@@ -20,7 +20,6 @@ import { AuthState, onAuthUIStateChange } from '@aws-amplify/ui-components';
 
 Amplify.configure(awsconfig);
 
-
 const App = () => {
   const [authState, setAuthState] = React.useState();
   const [user, setUser] = React.useState();
@@ -29,16 +28,13 @@ const App = () => {
 
   React.useEffect(() => {
       return onAuthUIStateChange((nextAuthState, authData) => {
-          console.log("Signed In:",AuthState.SignedIn)
-          console.log("Signed In:",nextAuthState)
           setAuthState(nextAuthState);
           setUser(authData)
-          setSignedin("signedin")
       });
   }, []);
 
   const signInMethod = () => {
-    setAuthState("signedin");  
+    setSignedin(true);
   }
 
   const setUsernameMethod = (name) => {
@@ -48,41 +44,30 @@ const App = () => {
   const signOutMethod = () => {
     setSignedin(false);
     Auth.signOut();
-  }
 
-  const authMethod = () => {
-  if (authState==='signedin') {
-    return (
-      <div className="App">
-      <Fragment>
-      <Router>
-        <NavigationBar username={username} signOutMethod={signOutMethod} />
-        <SegmentBar/> 
-        <Switch>
-           <Route exact path="/home" component={Home} />
-           <Route exact path="/prelogin" component={PreLoginPage} />
-          <Route exact path="/flight" component={FlightPage} />
-          <Route exacoct path="/hotel" component={HotelPage} /> 
-          <Route component={Home} />
-        </Switch>
-        <Footer />
-      </Router>
-    </Fragment>
-  </div>
-    )
-  } else {
-    return (
-      <Fragment> 
-      <PreLoginPage signedIn={signedIn} setUsernameMethod={setUsernameMethod} signInMethod={signInMethod} /> 
+  }
+  return signedIn ? (
+    <div className="App">
+        <Fragment>
+        <Router>
+          <NavigationBar username={username} signOutMethod={signOutMethod} />
+          <SegmentBar/> 
+          <Switch>
+             <Route exact path="/home" component={Home} />
+             <Route exact path="/prelogin" component={PreLoginPage} />
+            <Route exact path="/flight" component={FlightPage} />
+            <Route exacoct path="/hotel" component={HotelPage} /> 
+            <Route component={Home} />
+          </Switch>
+          <Footer />
+        </Router>
+        <AmplifyAuthenticator/> 
       </Fragment>
-    )
-  }
+    </div>
+  ) : (
+    <Fragment> 
+    <PreLoginPage signedIn={signedIn} setUsernameMethod={setUsernameMethod} signInMethod={signInMethod} /> 
+    </Fragment>
+);
 }
-
-  return (
-    authMethod()
-  )
- 
-}
-
 export default App;
