@@ -20,7 +20,19 @@ import useWindowDimensions from "../function/useWindowDimensions";
 const FlightSearchComponent = () => { 
 
   const { width } = useWindowDimensions();
-  const [gridTemplateColumns, setgridTemplateColumns] = useState("1fr 1fr");
+
+  const [gridStyle, setgridStyle] = useState({
+    display: "grid",
+    gridTemplateColumns:"1fr 1fr",
+    gridGap: "2%",
+    padding: "3%",
+    overflowY: "hidden",
+    justifyContent: "center",
+    width: "70%",
+    height:"100%",
+    paddingBottom:"10%",
+    paddingTop:"3%"
+  })
 
   useEffect(() => {
     function handleResize() {
@@ -28,9 +40,31 @@ const FlightSearchComponent = () => {
     }
     handleResize();
     if (width > 1200) {
-      setgridTemplateColumns("1fr 1fr");
+      setgridStyle({
+        display: "grid",
+        gridTemplateColumns:"1fr 1fr",
+        gridGap: "2%",
+        padding: "3%",
+        overflowY: "hidden",
+        justifyContent: "center",
+        width: "70%",
+        height:"100%",
+        paddingBottom:"10%",
+        paddingTop:"3%"
+      })
     } else {
-      setgridTemplateColumns("1fr");
+      setgridStyle({
+        display: "grid",
+        gridTemplateColumns:"1fr",
+        gridGap: "2%",
+        padding: "3%",
+        overflowY: "hidden",
+        justifyContent: "center",
+        width: "70%",
+        height:"100%",
+        paddingTop:"10%",
+        paddingBottom:"45%"
+      })
     }
   },[width]);
 
@@ -52,7 +86,7 @@ const FlightSearchComponent = () => {
 return(
 
 <Fragment> 
-<Container fluid style={{paddingTop:"50px",width: "70%", padding:'2%'}}> 
+<Container fluid style={{width: "70%", padding:'2%',paddingTop:"3%"}}> 
 <h3 className='landing-secondary-text'>Plan your Travel with Value</h3>
 <h1 className="landing-main-text">ALL FLIGHTS</h1> 
 
@@ -95,16 +129,16 @@ return(
 </FormControl>
 
 </Col>
-<Col xl={2}> 
-<Button variant="outline-secondary" className="search-button" style={{ border:"solid 1px" }}><center> <h4 style={{marginTop:"6px", fontSize:'18px', color:'black'}}> Search </h4></center> </Button>{' '}
+<Col xl={2} style={{paddingRight:"2%"}}> 
+<Button variant="outline-secondary" className="search-button" style={{ border:"solid 1px"}}><center> <h4 style={{marginTop:"6px", fontSize:'18px', color:'black'}}> Search </h4></center> </Button>{' '}
 </Col> 
 </Row> 
 
 
 <Row style={{marginBottom:"-40px",marginTop:"20px"}}>
-<Col xl={4}> </Col>
-<Col xl={5}> </Col>
-<Col xl={3}> 
+<Col xs={0} xl={4}> </Col>
+<Col xs={0} xl={5}> </Col>
+<Col xs={12} xl={3}> 
 <Form.Group>
 <Form.Label htmlFor="disabledTextInput" style={{float:"right"}}> Sort By</Form.Label>
   <Form.Control as="select" size="lg">
@@ -119,18 +153,8 @@ return(
 </Container> 
 
 <Container fluid
-        style={{
-          display: "grid",
-          gridTemplateColumns:gridTemplateColumns,
-          gridGap: "2%",
-          padding: "3%",
-          overflowY: "hidden",
-          justifyContent: "center",
-          width: "70%",
-          height:"100%",
-          paddingBottom:"10%"
-        }}
->
+       style={gridStyle}>
+         
           {flightsData.available_flights.map((flight) => (
             <FlightCard
             origin={flight.origin}
@@ -148,7 +172,6 @@ return(
             journey_timeline={flight.journey_timeline}
             />
         ))}
-
 </Container>
     </Fragment>
  )

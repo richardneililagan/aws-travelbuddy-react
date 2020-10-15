@@ -830,6 +830,9 @@ filter:brightness(2)
 }
 
 @media screen and (max-width: 400px) {
+
+
+
   .nav-links {
     width: 100%;
     left:-25%;
@@ -909,7 +912,7 @@ filter:brightness(2)
   font-style: normal;
   font-weight: 900;
   font-size: 39px;
-  line-height: 29px;
+  line-height: 42px;
   text-align: center;
   letter-spacing: 0.2em;
   text-shadow:1px 1px;
@@ -1381,7 +1384,7 @@ line-height: 33px;
     }
     
     @media screen and (max-width: 520px) {
-    
+        
       .flight-box-primary-text {
         float:left;
         font-family: Roboto;

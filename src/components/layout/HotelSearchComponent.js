@@ -18,18 +18,61 @@ import useWindowDimensions from "../function/useWindowDimensions";
 
 const HotelSearchComponent = () => { 
   const { width } = useWindowDimensions();
-  const [gridTemplateColumns, setgridTemplateColumns] = useState("1fr 1fr 1fr");
+
+  const [gridStyle, setgridStyle] = useState({
+    display: "grid",
+    gridTemplateColumns:"1fr 1fr 1fr",
+    gridGap: "2%",
+    padding: "3%",
+    overflowY: "hidden",
+    justifyContent: "center",
+    width: "72%",
+  })
+
+
+
   useEffect(() => {
     function handleResize() {
       window.addEventListener("resize", handleResize);
     }
     handleResize();
     if (width > 1200) {
-      setgridTemplateColumns("1fr 1fr 1fr");
+      setgridStyle({
+        display: "grid",
+        gridTemplateColumns:"1fr 1fr 1fr",
+        gridGap: "2%",
+        padding: "3%",
+        overflowY: "hidden",
+        justifyContent: "center",
+        width: "72%",
+        paddingTop:"3%",
+        paddingBottom:"10%"
+      });
     } else if (width<1200 && width>900) {
-      setgridTemplateColumns("1fr 1fr");
+      setgridStyle({
+        display: "grid",
+        gridTemplateColumns:"1fr 1fr",
+        gridGap: "2%",
+        padding: "3%",
+        overflowY: "hidden",
+        justifyContent: "center",
+        width: "72%",
+        paddingTop:"10%",
+        paddingBottom:"45%"
+      });
     } else {
-      setgridTemplateColumns("1fr");
+      setgridStyle({
+        display: "grid",
+        gridTemplateColumns:"1fr",
+        gridGap: "2%",
+        padding: "3%",
+        overflowY: "hidden",
+        justifyContent: "center",
+        width: "72%",
+        paddingTop:"10%",
+        paddingBottom:"45%"
+        
+      });
     }
   },[width]);
 
@@ -48,13 +91,14 @@ const HotelSearchComponent = () => {
 return(
 
 <Fragment> 
-<Container fluid style={{paddingTop:"50px",width: "70%", padding:'2%'}}> 
+<Container fluid style={{paddingTop:"50px",width: "70%"}}> 
 <h3 className='landing-secondary-text'>Plan your Travel with Value</h3>
 <h1 className="landing-main-text">ALL HOTELS</h1> 
 <Row noGutters style={{marginTop:"30px"}}> 
-<Col xl={10}> 
 
-<FormControl variant="outlined" className={classes.formControl}>
+<Col xs={12} xl={10}> 
+<center>
+<FormControl variant="outlined" className={classes.formControl} >
               <InputLabel id="demo-simple-select-outlined-label">
                 Country
               </InputLabel>
@@ -69,15 +113,14 @@ return(
                 <MenuItem value="3">Indonesia</MenuItem>
               </Select>
 </FormControl>
-
+</center> 
 </Col>
-<Col xl={2}> 
-<Button variant="outline-secondary" className="search-button" style={{ border:"solid 1px" }}><center> <h4 style={{marginTop:"6px", fontSize:'18px', color:'black'}}> Search </h4></center> </Button>{' '}
-</Col> 
+<Col xs={12} xl={2}>  
+ <Button variant="outline-secondary" className="search-button" style={{ border:"solid 0.5px", marginLeft:"2.2%" }}><center>  Search </center> </Button>{' '} 
+</Col>
 </Row> 
 
-
-<Row style={{marginBottom:"-40px",marginTop:"20px"}}>
+<Row noGutters style={{paddingTop:"2%"}} >
 <Col xl={4}> </Col>
 <Col xl={5}> </Col>
 <Col xl={3}> 
@@ -94,16 +137,7 @@ return(
 
 </Container> 
 <Container fluid
-        style={{
-          display: "grid",
-          gridTemplateColumns:gridTemplateColumns,
-          gridGap: "2%",
-          padding: "3%",
-          overflowY: "hidden",
-          justifyContent: "center",
-          width: "72%",
-          marginBottom:"10%"
-        }}
+        style={gridStyle}
       >
           {hotelsData.available_hotels.map((hotel) => (
                   <HotelCard
