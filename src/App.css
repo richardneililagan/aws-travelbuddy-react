@@ -22,14 +22,6 @@
   padding: 0;
 }
 
-/* body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
-  background-color: #fff;
-  color: #333;
-} */
-
 a {
   color: var(--primary-color);
   text-decoration: none;
@@ -380,22 +372,7 @@ table th {
   .lead {
     font-size: 1rem;
   }
-
-  /* Navbar */
-  /* .navbar {
-    display: block;
-    text-align: center;
-  }
-
-  .navbar ul {
-    text-align: center;
-    justify-content: center;
-  } */
-
-
 }
-
-
 
 /* Footer CSS  */
 .main-footer{
@@ -410,9 +387,6 @@ table th {
 
 /* Home Page */
 
-.home{
-  /* min-height: 1000px; */
-}
 
 .infopic1{
   height:150px;
@@ -420,16 +394,6 @@ table th {
   text-align: center;
   display:block;
 }
-
-/* .navbar-nav{
- position: absolute;
- right:5px;
- top: 10px;
- flex-direction: row !important; 
-}
- */
-
-
 /* Navbar CSS */
 
 .navbar {
@@ -617,11 +581,6 @@ filter:brightness(2)
     letter-spacing: 0.8px;
     margin-top:2px;
   }
-
-  
-
-
-
 }
 
 @media screen and (max-width: 1400px) {
@@ -704,8 +663,8 @@ filter:brightness(2)
     font-size:19px;
     color:#767676;
   }
-
-  .navbar-logo {
+ 
+   .navbar-logo {
     position: absolute;
     top:8vh;
     display: flex;
@@ -724,7 +683,7 @@ filter:brightness(2)
     background-color:white;
     font-family:Roboto;
     line-height:50px;
-  }
+  }  
 
   .navbar-divider {
     height:0px;
@@ -829,54 +788,6 @@ filter:brightness(2)
 
 }
 
-@media screen and (max-width: 400px) {
-
-
-
-  .nav-links {
-    width: 100%;
-    left:-25%;
-  }
-  .navbar-logo {
-    position: absolute;
-    right: 5%;
-    width: 40%;
-  }
-
-  .segment-links{ 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: relative;
-    left:5%;
-    width: 50%;
-    font-size: 16px;
-    font-style: lighter;
-    letter-spacing: 2px;
-    margin-top:1px;
-  }
-
-  .banner-text-primary {
-    font-family:Roboto;
-    color:white;
-    font-weight:bolder;
-    font-size:45px;
-    letter-spacing:2px;
-    filter:brightness(2)
-    
-    }
-    
-    .banner-text-secondary {
-      font-size:21px;
-      font-family:Roboto;
-      font-weight:bold;
-      color:white
-    
-    }
-
-    
-
-}
 
 .nav-active {
   transform: translateX(0%);
@@ -1060,8 +971,6 @@ line-height: 33px;
   letter-spacing:0.2px;
   padding-top:10px;
   padding-right:35px;
-  
-
 }
   
   /* Hotel Specials CSS  */
@@ -1191,7 +1100,6 @@ line-height: 33px;
 
     @media screen and (max-width: 1700px) {
       .hotel-box-primary-text {
-
         float:left;
         font-family: Roboto;
         font-style: normal;
@@ -1339,8 +1247,8 @@ line-height: 33px;
         font-family: Roboto;
         font-style: normal;
         font-weight: 900;
-        font-size: 22px;
-        line-height: 33px;
+        font-size: 18px;
+        line-height: 26px;
         
         }
         
@@ -1350,11 +1258,43 @@ line-height: 33px;
           font-family: Roboto;
           font-style: normal;
           font-weight: bold;
-          font-size: 23px;
-          line-height: 26px;
-          margin-top:3%;
-        
+          font-size: 16x;
+          line-height: 22px;
+          margin-top:4%;
           }
+  
+.flight-hovered-text-primary {
+  padding:25px;
+  font-size:18px;
+  font-weight:bolder;
+  text-align:center;
+  color:white; 
+  letter-spacing:0.8px;
+
+}
+
+.flight-hovered-text-secondary {
+  font-family:Roboto;
+  padding-left:30px;
+  font-size:17px;
+  font-weight:bold;
+  color:white;
+  letter-spacing:0.5px;
+  line-height: 130%;
+
+}
+
+.flight-hovered-text-tertiary{
+  float:right;
+  font-family:Roboto;
+  font-size:28px;
+  font-weight:bold;
+  color:white;
+  letter-spacing:0.2px;
+  padding-top:15px;
+  padding-right:20px;
+}
+  
     }
     
     @media screen and (max-width: 590px) {
@@ -1392,7 +1332,6 @@ line-height: 33px;
         font-weight: 900;
         font-size: 16px;
         line-height: 33px;
-        
         }
         
         .flight-box-secondary-text {
@@ -1404,11 +1343,51 @@ line-height: 33px;
           font-size: 19px;
           line-height: 28px;
           margin-top:3%;
-        
           }
     
     }
 
+    @media screen and (max-width: 400px) {
+      .nav-links {
+        width: 100%;
+        left:-25%;
+      }
+      .navbar-logo {
+        position: absolute;
+        right: 5%;
+        width: 40%;
+      }
+    
+      .segment-links{ 
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        left:5%;
+        width: 50%;
+        font-size: 16px;
+        font-style: lighter;
+        letter-spacing: 2px;
+        margin-top:1px;
+      }
+    
+      .banner-text-primary {
+        font-family:Roboto;
+        color:white;
+        font-weight:bolder;
+        font-size:45px;
+        letter-spacing:2px;
+        filter:brightness(2)
+        
+        }
+        
+        .banner-text-secondary {
+          font-size:21px;
+          font-family:Roboto;
+          font-weight:bold;
+          color:white
+        }
+    }
 
 
 .vLine {
@@ -1496,4 +1475,6 @@ line-height: 33px;
 .amplify-form-container{
   height:490px
 }
+
+
 

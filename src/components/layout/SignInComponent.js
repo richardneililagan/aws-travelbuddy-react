@@ -71,27 +71,26 @@ const SignInComponent = (props) => {
    <div className="header"> 
     <Container>         
     <Row style={{marginTop:"30px"}}> 
-        <Col xl={5}> 
+        <Col md={6} xl={5}> 
         <Form >
         <Form.Group controlId="formBasicEmail">
             <Form.Control style={{padding:"5%", fontSize:"14px"}} type="email" placeholder="Enter your username" onChange={usernameInput} onKeyPress={e => { if (e.key==='Enter') {triggerSignIn()}}}/>
         </Form.Group>
         </Form>
         </Col>
-        <Col xl={5}> 
+
+        <Col md={6} xl={5}> 
         <Form onSubmit={e => { e.preventDefault() }} >
   <Form.Group controlId="formBasicEmail">
-    {/* <Form.Label>Email address</Form.Label> */}
+    
     <Form.Control style={{padding:"5%", fontSize:"14px"}}  type="password" placeholder="Enter your password" onChange={passwordInput} onKeyPress={e => { if (e.key==='Enter') {triggerSignIn()}}}
      />
-    <Form.Text className="text-muted">
-      Forgot your password? Reset password.
-    </Form.Text>
+
   </Form.Group>
   </Form>
-
 </Col>
-<Col xl={1} style={{marginTop:"19px"}}> 
+
+<Col md={12} xl={2} style={{marginTop:"19px"}}> 
 {getButton()}
 </Col> 
 </Row> 

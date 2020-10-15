@@ -15,7 +15,7 @@ const SignInUpComponent = (props) => {
   return (
    <div className="header"> 
    <Container fluid 
-   style={{height:"60vh", backgroundImage:`${imageurl}`,backgroundPosition: `${backgroundPos}`, filter:"brightness(100%)"}}
+   style={{height:"55vh", backgroundImage:`${imageurl}`,backgroundPosition: `${backgroundPos}`, filter:"brightness(100%)"}}
    > 
     <Row style={{paddingTop:"6rem"}}>
     <Col xs={1} sm={0} md={1} lg={0} xl={2}></Col>
