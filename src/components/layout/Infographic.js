@@ -15,7 +15,7 @@ const Infographic = () => {
 
 <Row>
     <Col xs={2} sm={2} md={2} lg={3} xl={3}></Col>
-    <Col xs={8} sm={8} md={8} lg={0} xl={6}>    <h1 style={{fontWeight:"light", letterSpacing:'2px', fontSize:'45px'}}> TravelBuddy </h1> </Col>
+    <Col xs={8} sm={8} md={8} lg={0} xl={6}>    <h1 className="info-primary-text"> TravelBuddy </h1> </Col>
     <Col xs={2} sm={2} md={2} lg={3} xl={3}></Col>
 
 </Row>

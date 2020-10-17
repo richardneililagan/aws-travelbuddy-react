@@ -352,6 +352,11 @@ table th {
   bottom:3vh;
 }
 
+.info-primary-text {
+  font-weight:light;
+  letter-spacing:2px;
+  font-size:45px; 
+}
 
 
 /* Mobile Styles */
@@ -680,7 +685,7 @@ filter:brightness(2)
     color:#767676;
   }
  
-   .navbar-logo {
+   /* .navbar-logo {
     position: absolute;
     top:8vh;
     display: flex;
@@ -699,7 +704,7 @@ filter:brightness(2)
     background-color:white;
     font-family:Roboto;
     line-height:50px;
-  }  
+  }   */
 
   .navbar-divider {
     height:0px;
@@ -810,6 +815,12 @@ filter:brightness(2)
       left:63vw;
       bottom:2vh;
      } 
+
+     .info-primary-text {
+      font-weight:light;
+      letter-spacing:2px;
+      font-size:32px; 
+    }
 
 
 }
@@ -1415,6 +1426,12 @@ line-height: 33px;
           font-family:Roboto;
           font-weight:bold;
           color:white
+        }
+
+        .chatbot{
+          position:relative; 
+          left:56vw;
+          bottom:3vh;
         }
     }
 
