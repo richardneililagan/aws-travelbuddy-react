@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavigationBar from "./components/layout/NavigationBar";
 import Home from "./components/pages/Home";
@@ -10,7 +9,6 @@ import SegmentBar from "./components/layout/SegmentBar";
 import FlightPage from "./components/pages/FlightPage";
 import HotelPage from "./components/pages/HotelPage";
 import PreLoginPage from "./components/pages/PreLoginPage";
-
 // AWS Amplify
 import Amplify from 'aws-amplify';
 import {Auth} from 'aws-amplify'; 

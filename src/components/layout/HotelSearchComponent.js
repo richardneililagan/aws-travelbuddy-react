@@ -123,15 +123,17 @@ return(
 <Row noGutters style={{paddingTop:"2%"}} >
 <Col xl={4}> </Col>
 <Col xl={5}> </Col>
-<Col xl={3}> 
+<Col xs={12} xl={3}> 
+<center> 
 <Form.Group>
-<Form.Label htmlFor="disabledTextInput" style={{float:"right"}}> Sort By</Form.Label>
+<Form.Label htmlFor="disabledTextInput" style={{float:"right", marginLeft:"2.2%"}}> Sort By</Form.Label>
   <Form.Control as="select" size="lg">
     <option>Lowest Price</option>
     <option>Highest Price</option>
     <option>Location</option>
   </Form.Control>
 </Form.Group>
+</center> 
  </Col>
 </Row>
 

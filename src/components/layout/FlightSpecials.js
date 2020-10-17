@@ -16,7 +16,6 @@ const FlightSpecials = () => {
     function handleResize() {
       window.addEventListener("resize", handleResize);
     }
-
     handleResize();
 
     if (width > 1200) {
@@ -42,7 +41,6 @@ const FlightSpecials = () => {
           <h3 className='landing-secondary-text'>Limited Deals for Unlimited Fun</h3>
             <h1 className="landing-main-text">FLIGHT SPECIALS</h1> 
             <Link to="/flight" style={{color:"black"}}> <h3 className='landing-secondary-text' style={{marginTop:"10px"}}>View all Flights<IoIosArrowForward/></h3> </Link>
-
               <Slider {...settings} className="slider-div-flight">
                 {saleFlights.map((flight) => (
                   <FlightCard

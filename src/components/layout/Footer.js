@@ -246,8 +246,7 @@ const Footer = () => {
             onComplete={handleComplete}
             clearOnComplete={true}
             conversationModeOn={true}
-            className="chatbot-box"
-            />
+            className="chatbot-box"/>
         </Popover>
       }
 >
@@ -261,6 +260,7 @@ const Footer = () => {
   );
 };
 export default Footer; 
+
 const FooterContainer = styled.footer`
 
 .container{

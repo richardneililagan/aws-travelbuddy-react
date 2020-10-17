@@ -4,15 +4,12 @@ import LanguageIcon from '@material-ui/icons/Language';
 import Button from 'react-bootstrap/Button'
 import Divider from '@material-ui/core/Divider';
 import {SiFloatplane} from "react-icons/si"
-import PersonIcon from '@material-ui/icons/Person';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import Modal from 'react-bootstrap/Modal'
 import Image from "react-bootstrap/Image"
 import {Storage} from "aws-amplify"
-import ReactDropzone from 'react-dropzone';
 import {useDropzone} from 'react-dropzone'
 import {IoMdPhotos} from 'react-icons/io'
-import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import {SyncLoader} from "react-spinners"
 import Col from "react-bootstrap/Col"

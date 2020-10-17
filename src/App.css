@@ -345,7 +345,13 @@ table th {
   background: var(--light-color);
 }
 
-/* Navbar */
+
+.chatbot{
+	position:relative; 
+  left:88vw;
+  bottom:3vh;
+}
+
 
 
 /* Mobile Styles */
@@ -617,7 +623,13 @@ filter:brightness(2)
     width: 48%;
     right:0%;
   }
-  
+
+
+.chatbot{
+	position:relative; 
+  left:80vw;
+  bottom:3vh;
+ } 
 }
 
 @media screen and (max-width: 1024px) {
@@ -641,8 +653,12 @@ filter:brightness(2)
     width: 35%;
     font-size: 15px;
     letter-spacing: 0.5px;
-
   }
+  .chatbot{
+    position:relative; 
+    left:78vw;
+    bottom:3vh;
+   } 
 
 }
 @media screen and (max-width: 768px) {
@@ -744,6 +760,12 @@ filter:brightness(2)
       color:white
     
     }
+
+    .chatbot{
+      position:relative; 
+      left:68vw;
+      bottom:2vh;
+     } 
 }
 
 @media screen and (max-width: 590px) {
@@ -783,7 +805,11 @@ filter:brightness(2)
       margin-top:3px;
     }
     
-
+    .chatbot{
+      position:relative; 
+      left:63vw;
+      bottom:2vh;
+     } 
 
 
 }
@@ -882,7 +908,10 @@ letter-spacing: 0.1em;
   margin:auto;
   margin-top:50px;
   background-color:white;
+  padding-bottom:1%;
 }
+
+
 
 .flight-specials-card { 
   width:97%;
@@ -896,7 +925,6 @@ height:280px;
 border-radius:3px 3px 0px 0px;
 background-size: 600px;
 }
-
 
 .flight-specials-img-hovered { 
   height:280px;
@@ -1212,6 +1240,7 @@ line-height: 33px;
               font-size: 12px;
               line-height: 25px;
               }
+
     }
 
     @media screen and (max-width: 1200px) {
@@ -1462,18 +1491,10 @@ line-height: 33px;
   height: 100vh;
 }
 
-.chatbot{
-	position:absolute; 
-	width:100px;
-	height:100px;
-	top:-5vh;
-	right:-88%;
 
-
-}
 
 .amplify-form-container{
-  height:490px
+  height:100%
 }
 
 
