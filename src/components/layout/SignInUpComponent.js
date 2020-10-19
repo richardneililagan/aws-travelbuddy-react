@@ -15,9 +15,9 @@ const SignInUpComponent = (props) => {
   return (
    <div className="header"> 
    <Container fluid 
-   style={{height:"55vh", backgroundImage:`${imageurl}`,backgroundPosition: `${backgroundPos}`, filter:"brightness(100%)"}}
+   style={{height:"55vh", backgroundImage:`${imageurl}`,backgroundPosition: `${backgroundPos}`, filter:"brightness(100%)", padding:"5%"}}
    > 
-    <Row style={{paddingTop:"6rem"}}>
+    <Row className="pre-login-banner-row" >
     <Col xs={1} sm={0} md={1} lg={0} xl={2}></Col>
        <h1 className="banner-text-primary"> TravelBuddy </h1> 
        </Row>

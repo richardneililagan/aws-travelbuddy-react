@@ -100,7 +100,7 @@ const NavigationBarPreLogin = (props) => {
 
 <li className="nav-links-join" >
    
-   <Button variant="light" size="sm" className="join-button"> <p className="join-button-text"> <center> Join Free </center> </p></Button></li>
+   <Button variant="light" size="sm" className="join-button"> <p className="join-button-text"> Join Free  </p></Button></li>
 
       </ul>
 

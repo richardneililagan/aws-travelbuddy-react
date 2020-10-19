@@ -14,51 +14,51 @@ import Row from "react-bootstrap/Row"
 import {SyncLoader} from "react-spinners"
 import Col from "react-bootstrap/Col"
 
-const onClick = () => {
-  const nav = document.querySelector(".navbar-logo");
-  const navLinks = document.querySelectorAll(".navbar-logo li");
-  nav.classList.toggle("nav-active");
+// const onClick = () => {
+//   const nav = document.querySelector(".navbar-logo");
+//   const navLinks = document.querySelectorAll(".navbar-logo li");
+//   nav.classList.toggle("nav-active");
 
-  navLinks.forEach((link, index) => {
-    if (link.style.animation) {
-      link.style.animation = "";
-    } else {
-      link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 +
-        0.2}s`;
-    }
-  });
-  // Burg Animation
-  const burger = document.querySelector(".burger");
-  burger.classList.toggle("toggle");
-  if (nav.classList.value.includes("nav-active")) {
-    const lang = document.querySelector(".nav-links-lang");
-    const loyalty = document.querySelector(".nav-links-loyalty");
-    const manage = document.querySelector(".nav-links-manage");
-    const login = document.querySelector(".nav-links-login");
-    const join = document.querySelector(".nav-links-join");
+//   navLinks.forEach((link, index) => {
+//     if (link.style.animation) {
+//       link.style.animation = "";
+//     } else {
+//       link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 +
+//         0.2}s`;
+//     }
+//   });
+//   // Burg Animation
+//   const burger = document.querySelector(".burger");
+//   burger.classList.toggle("toggle");
+//   if (nav.classList.value.includes("nav-active")) {
+//     const lang = document.querySelector(".nav-links-lang");
+//     const loyalty = document.querySelector(".nav-links-loyalty");
+//     const manage = document.querySelector(".nav-links-manage");
+//     const login = document.querySelector(".nav-links-login");
+//     const join = document.querySelector(".nav-links-join");
 
-    lang.addEventListener("click", () => {
-      onClick();
-    });
+//     lang.addEventListener("click", () => {
+//       onClick();
+//     });
 
-    loyalty.addEventListener("click", () => {
-      onClick();
-    });
+//     loyalty.addEventListener("click", () => {
+//       onClick();
+//     });
 
-    manage.addEventListener("click", () => {
-      onClick();
-    });
+//     manage.addEventListener("click", () => {
+//       onClick();
+//     });
 
-    login.addEventListener("click", () => {
-      onClick();
-    });
+//     login.addEventListener("click", () => {
+//       onClick();
+//     });
 
-    join.addEventListener("click", () => {
-      onClick();
-    });
+//     join.addEventListener("click", () => {
+//       onClick();
+//     });
     
-  }
-};
+//   }
+// };
 
 const NavigationBar = (props) => {
   const [click, setClick] = useState(false);
@@ -259,7 +259,7 @@ return (
           </Link>{" "}
         </li>
       </ul>
-      <div className="burger" onClick={onClick}>
+      <div className="burger" >
         <div className="line1"> </div>
         <div className="line2"> </div>
         <div className="line3"> </div>

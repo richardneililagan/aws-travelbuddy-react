@@ -16,6 +16,7 @@ import Popover from 'react-bootstrap/Popover'
 import Fab from '@material-ui/core/Fab';
 import { makeStyles } from '@material-ui/core/styles';
 import NavigationIcon from '@material-ui/icons/Navigation';
+import Container from "react-bootstrap/Container"
 
 // const downloadQR = () => {
 //     const canvas = document.getElementById("123456");
@@ -79,10 +80,8 @@ const Footer = () => {
             </Col>
             </Row> 
             <hr />
-     
           <div className="row">
             {/* Column 1 */}
-
             <div className="col-md-3 col-sm-6">
               <h4 className="footer-headers">Explore</h4>
               <ul className="list-unstyled">
@@ -217,7 +216,6 @@ const Footer = () => {
               </a>
             </div>
           </div>
-
           {/* Footer Bottom  */}
           <div className="footer-bottom">
             <hr />

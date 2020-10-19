@@ -23,7 +23,7 @@ const Infographic = () => {
 <Row>
 
 <Col xs={2} sm={2} md={2} lg={3} xl={3}></Col>
-    <Col xs={8} sm={8} md={8} lg={6} xl={6}><h3 style={{fontWeight:"lighter", letterSpacing:'3px', fontSize:'25px'}}> The only buddy you need to bring along on your life's adventures</h3> </Col>
+    <Col xs={8} sm={8} md={8} lg={6} xl={6}><h3 className="info-secondary-text"> The only buddy you need to bring along on your life's adventures</h3> </Col>
     <Col xs={2} sm={2} md={2} lg={3} xl={3}></Col>
 
 </Row>
