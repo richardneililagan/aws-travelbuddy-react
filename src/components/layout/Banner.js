@@ -4,14 +4,13 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 
-
 const Banner = (props) => {
     const {imageurl, backgroundPos, secondaryText } = props;
 
   return (
    <div className="header"> 
-   <Container fluid 
-   style={{height:"45vh", backgroundImage:`${imageurl}`,backgroundPosition: `${backgroundPos}`, filter:"brightness(100%)"}}
+   <Container fluid className="banner-div"
+   style={{backgroundImage:`${imageurl}`,backgroundPosition: `${backgroundPos}`}}
    > 
     <Row style={{paddingTop:"6rem"}}>
     <Col xs={1} sm={0} md={1} lg={0} xl={2}></Col>
