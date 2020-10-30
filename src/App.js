@@ -9,7 +9,7 @@ import SegmentBar from "./components/layout/SegmentBar";
 import FlightPage from "./components/pages/FlightPage";
 import HotelPage from "./components/pages/HotelPage";
 import PreLoginPage from "./components/pages/PreLoginPage";
-// AWS Amplify
+
 import Amplify from 'aws-amplify';
 import {Auth} from 'aws-amplify'; 
 import awsconfig from './aws-exports';
